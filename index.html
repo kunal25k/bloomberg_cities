@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>How City Actions shaped the Pandemic</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <nav id="menu"></nav> -->
+    <div id='map'></div>
+    <div id="mapInset">
+        <div id="income-legend" class="legend">
+            <h4>Cases/county (7 day average)</h4>
+            <div><span style="background-color: #ffffff"></span>0</div>
+            <div><span style="background-color: #00FFFF"></span>300</div>
+            <div><span style="background-color: #6ded97"></span>600</div>
+            <div><span style="background-color: #c9ca2b"></span>1000</div>
+            <div><span style="background-color: #efa300"></span>1500</div>
+            <div><span style="background-color: #ff7600"></span>2000</div>
+            <div><span style="background-color: #ff4100"></span>2800</div>
+        </div>
+    </div>
+    <div id='story'></div>
+    <!-- <div id="wrapper"></div> -->
+
+    <!-- <script src="./../../d3.v5.js"></script> -->
+    <script src="https://unpkg.com/d3@5.11.0/dist/d3.min.js"></script>
+
+
+    <!-- <div id='title' class="title">
+        <h1>The Geographical Distribution of Subway<br> Usage Decrease Due to COVID-19</h1>
+        <p>This map documents changes in ridership by subway station between March 6 and March 20th, as measured through turnstile usage. The data is provided by the New York City Metro Transit Authority. To contextualize station locations across the five boroughs, an additional layer (Median Household Income) has been added. This data is block group-level estimates provided by the American Community Survey of the U.S. Census Bureau.</p>
+        <hr>
+        <div id="turnstile-legend" class="legend2">
+            <h4>Drop in Ridership</h4>
+            <p><em>Click on stations for detailed turnstile usage</em></p>
+            <div><span style="background-color: #fef0d3"></span>&#8594;<span style="background-color: #ff4400; height:20px; width:20px"></span> < 50% decrease to > 90% decrease</div>
+        </div>
+        <div id="income-legend" class="legend">
+            <h4>Median Household Income</h4>
+            <div><span style="background-color: #00a2ca"></span>$150,000 +</div>
+            <div><span style="background-color: #33b5d5"></span>$100,000 - $150,000</div>
+            <div><span style="background-color: #66c7e0"></span>$75,000 - $100,000</div>
+            <div><span style="background-color: #99daea"></span>$50,000 - $75,000</div>
+            <div><span style="background-color: #ccedf5"></span>$20,000 - $50,000</div>
+            <div><span style="background-color: #ffffff"></span>Less than $20,000</div>
+        </div>
+    </div> -->
+    <script src='config.js'></script>
+    <script type='text/javascript' src="map.js"></script>
+    <!-- <script src="chart.js"></script> -->
+</body>
+</html>
+
