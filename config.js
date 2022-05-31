@@ -169,7 +169,7 @@ var config = {
             title: '1. COVID-19 arrives on American Shores, March 2020', // 2020-03-20
             // image: 'images/chevron.png',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.  In the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies were proposed. That’s 35% of all local covid actions to date!',
+            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> In the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies were proposed. That’s 35% of all local covid actions to date!',
             butt: sl1,
             callback: 'addLegend',
             location: {
