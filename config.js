@@ -82,7 +82,7 @@ var sl6 = [ob6_1, ob6_2, ob6_3, ob6_4, ob6_5];
 // Slide 8
 
 const ob8_1 = {city:"Los Angeles, California", policy:"The Los Angeles City Council unanimously passed two motions Wednesday with the goal of making Los Angeles' vaccine distribution equitable and inoculating low-income communities of color.", date:"27 January 2021"};
-const ob8_2 = {city:"Seattle, Washington", policy:"The Los Angeles City Council unanimously passed two motions Wednesday with the goal of making Los Angeles' vaccine distribution equitable and inoculating low-income communities of color.", date:"21 January 2021"};
+const ob8_2 = {city:"Seattle, Washington", policy:"Seattle has created a vaccine information site so that residents can quickly confirm eligibility for the vaccine and locations to receive it.", date:"21 January 2021"};
 const ob8_3 = {city:"Mesa, Arizona", policy:"The city of Mesa is offering employees the first round of the COVID-19 vaccine and several pop-ups have been scheduled throughout the city.", date:"21 January, 2021"};
 const ob8_4 = {city:"Henderson, Nevada", policy:"City employees and frontline workers have begun receiving the COVID-19 vaccine. ", date:"4 March, 2021"};
 const ob8_5 = {city:"Phoenix, Arizona", policy:"Phoenix provides employees information on COVID-19 vaccination to encourage employees to get the vaccine from Maricopa County.", date:"4 February 2021"};
