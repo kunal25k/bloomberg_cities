@@ -417,7 +417,7 @@ var config = {
 
         {
             id: '9info',
-            title: '7. Vaccination, January 2020',  //2020-12-05
+            title: '7. Vaccination, January 2021',  //2020-12-05
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
             description: "After the announcement of the success of Pfizer’s clinical trials for a covid vaccine, <b>“Vaccinations”</b> was by far the most popular policy area, and continued to be for the next 6 months. The first wave of shots went to healthcare workers, as well as some top government officials. By March 12, 2021, The US surpassed 100 million doses, almost 1/3rd of its population. <br></br>Local actions included creating websites for vaccination information and setting up vaccination sites.",
