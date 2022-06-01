@@ -169,7 +169,7 @@ var config = {
             title: '1. COVID-19 arrives on American Shores, March 2020', // 2020-03-20
             // image: 'images/chevron.png',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> In the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies were proposed. That’s 35% of all local covid actions to date!',
+            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> In the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies were proposed.', //That’s 35% of all local covid actions to date!
             butt: sl1,
             callback: 'addLegend',
             location: {
@@ -197,7 +197,7 @@ var config = {
             title: '2. Early Hotspots, April 2020', // 2020-04-10
             // image: 'images/Chapter_1_Image.jpg',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: 'The New York metropolitan area was one of the early hotspots, and New Orleans - where studies suggested that Mardi Gras celebrations were responsible for some of the worst early outbreaks in the US. <br> <br> <b>Ensuring safe water for everyone</b> <br> Almost 300 cities suspended all water shutoffs. This ensured that more than 51 million americans would be protected from losing access to water services during the pandemic.',
+            description: 'The New York metropolitan area was one of the early hotspots, and New Orleans - where studies suggested that Mardi Gras celebrations were responsible for some of the worst early outbreaks in the US. <br> <br> <b>Ensuring safe water for everyone</b> <br> Almost 300 cities suspended all water shutoffs. This ensured that more than 51 million Americans would be protected from losing access to water services during the pandemic.',
             callback: 'addLegend',
             butt: sl2,
             location: {
