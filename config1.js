@@ -32,7 +32,7 @@ var sl2 = [ob2_1, ob2_2, ob2_3];
 
 // Slide 3
 
-const ob3_1 = {city:"New York, New York", policy:"Open Streets + Restaurants: The new program will expand seating options for restaurants on select restaurant corridors throughout the five boroughs.", date:"3 July, 2020"};
+const ob3_1 = {city:"New York, New York", policy:"NEW NYC INITIATIVE TO COMBINE OPEN STREETS WITH OPEN RESTAURANTS; The city is combining two popular programs for the summer 'Open Streets and Open Restaurants'. The new program will expand seating options for restaurants on select restaurant corridors throughout the five boroughs. An additional 10 to 20 corridors will be approved starting Friday, July 17. ", date:"3 July, 2020"};
 const ob3_2 = {city:"Wilmington, Delaware", policy:"'Curbside Wilmington' will enable Downtown restaurants to expand their outdoor dining into former parking spaces directly in front of their businesses, thereby allowing more seating at safely spaced distances in accordance with Governor Carney's guidelines.", date:"10 June 2020"};
 const ob3_3 = {city:"Albuquerque, New Mexico", policy:"Mayor Tim Keller announced that, for the second summer in a row, the City of Albuquerque will allow restaurants to add sidewalk seating. The mayor will also work to expand outdoor seating into parking lots, where it makes sense to do so.", date:"27 June, 2020"};
 const ob3_4 = {city:"Columbus, Ohio", policy:"In an effort to assist local restaurants during the Public Health Emergency Order declared by Mayor Andrew J. Ginther in March, the City of Columbus is implementing a pilot program that will allow restaurants to expand outdoor seating in Columbus.", date:"31 August, 2020"};
@@ -82,7 +82,7 @@ var sl6 = [ob6_1, ob6_2, ob6_3, ob6_4, ob6_5];
 // Slide 8
 
 const ob8_1 = {city:"Los Angeles, California", policy:"The Los Angeles City Council unanimously passed two motions Wednesday with the goal of making Los Angeles' vaccine distribution equitable and inoculating low-income communities of color.", date:"27 January 2021"};
-const ob8_2 = {city:"Seattle, Washington", policy:"Seattle has created a vaccine information site so that residents can quickly confirm eligibility for the vaccine and locations to receive it.", date:"21 January 2021"};
+const ob8_2 = {city:"Seattle, Washington", policy:"The Los Angeles City Council unanimously passed two motions Wednesday with the goal of making Los Angeles' vaccine distribution equitable and inoculating low-income communities of color.", date:"21 January 2021"};
 const ob8_3 = {city:"Mesa, Arizona", policy:"The city of Mesa is offering employees the first round of the COVID-19 vaccine and several pop-ups have been scheduled throughout the city.", date:"21 January, 2021"};
 const ob8_4 = {city:"Henderson, Nevada", policy:"City employees and frontline workers have begun receiving the COVID-19 vaccine. ", date:"4 March, 2021"};
 const ob8_5 = {city:"Phoenix, Arizona", policy:"Phoenix provides employees information on COVID-19 vaccination to encourage employees to get the vaccine from Maricopa County.", date:"4 February 2021"};
@@ -147,31 +147,30 @@ const obAL_4 = {city:"Louisville, Kentucky", policy:"With millions in federal st
 
 var slAL = [obAL_1, obAL_2, obAL_3, obAL_4, obAL_5];
 
+
 var config = {    
     accessToken: 'pk.eyJ1Ijoia3VuYWwyNWsiLCJhIjoiY2wzZXk5aHV6MDJxNjNrcWkzc3NmbmZsbSJ9.doJOBOpo8o2JpjQL1cCsNQ',
     style: 'mapbox://styles/kunal25k/cl3f3k2yq001n15pkeduqy8ew', //light
     // style: 'mapbox://styles/kunal25k/cl3nyck2d005v15o4er1jluqu', // dark
     theme: 'light',
-    plugin: 'yes',
     // inset: true,
     // projection: 'equirectangular',
     alignment: 'right',
     toptitle: 'Bloomberg Philanthropies | National League of Cities | NYU CUSP',
-    title: '4871 policies and 800 cities - How the pandemic shaped city actions in America',
+    title: 'The Pandemic through the lens of cities',
     byline: 'Kunal Kulkarni',
     // description: '<p>This tutorial demonstrates how to use <a href="https://github.com/mapbox/storytelling">Mapbox Storytelling</a> with our previous web mapping example. Here we will use Mapbox storytelling template to first, give an overview of the decrease in subway usage around the city, and second, zoom into three different locations that exemplify the diversity of conditions around New York.</p><p>We will use the <a href="https://pointsunknown.nyc/web%20mapping/mapbox/2020/03/25/10_WebmappingTurnstileData.html">previous web map displaying MTA turnstile data</a> as the basis for our story. In this process we will use Mapbox GL JS, as well as Intersection Observer and Scrollama as our main JavaScript libraries.</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p>',
-    description: "Bloomberg Philanthropies, along with the NLC created the COVID-19 local action tracker. The data in this Tracker reflects how communities across the country jumped into action to address community needs and learn from one another.<br></br",
-    footer: 'This story is based on data by <a href="https://www.nlc.org/resource/covid-19-local-action-tracker/">Bloomberg Philantropies and the National League of Cities</a> ',
+    description: '<b>Bloomberg Philanthropies</b>, along with the <b>NLC</b> created the COVID-19 local action tracker. The data in this Tracker reflects how communities across the country jumped into action to address community needs and learn from one another. <br></br>Although the US government’s structure meant that much of the pandemic response was left up to state and local leaders, federal and state governments received the vast majority of media coverage for their actions. Hence, I figured - how best can I represent local actions happening over time?  <br></br> Representing large amounts of policy data can be challenging - The qualitative nature of policies means that one can’t solely rely on counts or frequencies of policies to tell a story. <br></br> Below is my attempt to visualise how almost 5000 policies from 800 distinct cities evolved with the pandemic.',
+    footer: 'This story is based on data by the <a href="http://web.mta.info/developers/turnstile.html">Metropolitan Transit Authority</a> and reporting by the New York Times (<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">here</a> and <a href="https://www.nytimes.com/aponline/2020/04/02/us/ap-us-virus-outbreak-hardest-hit.html">here</a>), <a href="https://ny.curbed.com/2020/3/24/21192454/coronavirus-nyc-transportation-subway-citi-bike-covid-19">Curbed</a>, and <a href="https://thecity.nyc/2020/03/subway-ridership-plunge-deepest-at-big-manhattan-stations.html">The City</a>.',
     footerAttribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> | <a href="https://brown.columbia.edu">The Brown Institute for Media Innovation</a>',
     chapters: [
         {
             id: '0info',
             title: '1. COVID-19 arrives on American Shores, March 2020', // 2020-03-20
             // image: 'images/chevron.png',
-            imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.', //That’s 35% of all local covid actions to date!
+            // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
+            description: 'On March 13, 2020, President Donald Trump declared the novel coronavirus a national emergency.  In the coming week, more than 350 cities came out with emergency policies. In the next month, more than 1600 policies were proposed. That’s 35% of all local covid actions to date!',
             butt: sl1,
-            graph : [drawFirstLegend,drawLineChartFirst, 'blue', 'red', 'Cases' ,'Prevention Policies','first'],
             callback: 'addLegend',
             location: {
                 center: [-95.7129, 37.0902],
@@ -195,14 +194,12 @@ var config = {
         },
         {
             id: '1info',
-            title: '2. Re-Opening, April 2020', // 2020-04-10
+            title: '2. Early Hotspots, April 2020', // 2020-04-10
             // image: 'images/Chapter_1_Image.jpg',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: '<b>Reopening</b> policies spiked in June 2020, when the first wave had sort of plateaued before rising up again. This indicates that the laxing of policies/ loosening up lockdown policies were strongly correlated with the rise in cases.',
+            description: 'The New York metropolitan area was one of the early hotspots, and New Orleans - where studies suggested that Mardi Gras celebrations were responsible for some of the worst early outbreaks in the US. <br> <br> <b>Ensuring safe water for everyone</b> <br> Almost 300 cities suspended all water shutoffs. This ensured that more than 51 million americans would be protected from losing access to water services during the pandemic.',
             callback: 'addLegend',
-            imageCredit: '<b>Re-Opening Policies</b> and <b>Cases</b>',
-            butt: sl3,
-            graph : [drawReOpeningLegend,drawLineChartReOpening, 'blue', 'purple', 'Cases' ,'Re-Opening Policies','reopen'],
+            butt: sl2,
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -228,13 +225,11 @@ var config = {
             id: '2info',
             // hidden: true,
             callback: addLegend,
-            // butt: sl3,
-            title: '3. Prevention (2), June 2020',
-            imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            graph : [drawSecondLegend,drawLineChartSecond, 'blue', 'red', 'Cases' ,'Prevention Policies','second'],
+            butt: sl3,
+            title: '3. Re-Opening America, June 2020',
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'The loosening of Covid restrictions saw a second wave of the coronavirus corresponding with a <b>second wave of Prevention Policies</b> - with cities reimposing many restrictions',
+            description: 'During this time period, a large majority of the re-opening policies were out, of which 1 in 4 were focused on restaurants. Meanwhile, COVID continues spreading in the South-East. <br></br><b> Dine Out</b> <br></br>75 cities either increased dining-in capacity, or launched pilot programs for temporarily expanding into adjacent outdoor spaces. Denver, Columbus, Detroit and New York all launched successful campaigns - More than 10,000 restaurants participated in New York’s program, saving an estimated 90,000 jobs. Due to the success of the emergency Open Restaurants Program during COVID-19, New York City is working to create a permanent Open Restaurants program.',
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -258,13 +253,11 @@ var config = {
         // normal layers
         {
             id: '3info',   //2020-08-01
-            title: '4. Prevention (3), August 2020',
-            butt: sl7,
-            imageCredit: '<b>Third Policies</b> and <b>Cases</b>',
-            graph : [drawThirdLegend,drawLineChartThird, 'blue', 'red', 'Cases' ,'Prevention Policies','third'],
+            title: '4. The Southern spread, August 2020',
+            butt: sl4,
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'As a devastating third wave swept through the country, while there were lesser city policies, cities imposed tighter restrictions - have a look below.',
+            description: 'As the South saw a pronounced increase in cases, Miami, Dallas, Austin, Jacksonville, Atlanta, Memphis and San Antonio developed as hotspots. In all emergency action policies, 60% of the southern cities had the phrase ‘extension’, as compared to 30% of the rest of the cities.<br></br><b>Flattening the Curve </b><br></br>After the focus on reopening in the previous months, city focuses shifted to adapting to pre-pandemic lifestyles without causing more spikes in cases - flattening the curve. In the 2 month window from June to August 2020, <i>Prevention</i> and <i>Housing</i> emerged as the two highest occurring policy areas. ‘Prevention’ is a very broad topic though - it includes cities pushing programs and actions mandating masks, social distancing policies as well as extending a state of emergency. Almost 50% of all prevention policies contained the word ‘mask’ - either urging people to wear masks, or mandating masks in public spaces. <br></br> Majority of the housing policies are also seen in this time period, as especially larger cities dealt with an acute increase in homelessness',
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -314,12 +307,11 @@ var config = {
 
         {
             id: '5info',  //2020-10-16
-            title: '5. Vaccination, October 2020',
-            butt: sl8,
-            imageCredit: '<b>Vaccination Policies</b> and <b>Cases</b>',
-            // callback: addLegend,
-            graph : [drawVaxLegend,drawLineChartVax, 'blue', 'green', 'Cases' ,'Vaccination Policies','vaxx'],
-            description: 'The approval of COVID vaccines in December, 2020 coincided with a decrease in overall cases throughout the country.',
+            title: '5. The Dakotas, October 2020',
+            butt: sl5,
+            // image: 'images/rushmore.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -343,7 +335,7 @@ var config = {
         {
             id: '6info',  //2020-10-16
             // title: '5. The Dakotas, October 2020',
-            // butt: sl8,
+            // // butt: sl5,
             // // image: 'images/rushmore.jpg',
             // // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
             // description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
@@ -370,12 +362,11 @@ var config = {
 
         {
             id: '7info',  //2020-10-16
-            title: '6. ARPA, November 2020',
-            sec: [slAL, slAS],
-            // callback: removeLegend,
-            imageCredit: '<b>ARPA Policies</b> and <b>Cases</b>',
-            graph : [drawARPALegend,drawLineChartARPA, 'blue', 'green', 'Cases' ,'ARPA Policies','arpa'],
-            description:'The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies.<br><br> While larger cities seemed to focus investments on housing, smaller cities used their ARPA budgets to update their infrastructure.',
+            title: '6. School is out, November 2020',
+            butt: sl6,
+            // image: 'images/rushmore.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: 'Schools in some parts of the United States suspended in-person classes, and many districts delayed plans to reopen in the face of skyrocketing COVID-19 cases, which fueled a heated debate among parents, educators, and experts about the safety of operating schools. While many schools shifted to distance learning, some others incorporated stricter testing requirements.',
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -396,506 +387,585 @@ var config = {
             ]
         },
 
+        {
+            id: '8info',
+            title: '6. The big Second Wave, December 2020',  //2020-12-05
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: "With hospitals struggling to find Intensive Care Unit beds for patients, many cities in the United States imposed lockdowns and business closures in an attempt to contain a wave of illness which was catalysed by November's Thanksgiving gatherings. <br></br>Emergency measures included lockdowns, curfews and mask mandates, as officials urged people not to travel in a rather grim holiday season.",
+            butt: sl7,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                // zoom: 7,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info8',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info8',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '9info',
+            title: '7. Vaccination, January 2020',  //2020-12-05
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: "After the announcement of the success of Pfizer’s clinical trials for a covid vaccine, <b>“Vaccinations”</b> was by far the most popular policy area, and continued to be for the next 6 months. The first wave of shots went to healthcare workers, as well as some top government officials. By March 12, 2021, The US surpassed 100 million doses, almost 1/3rd of its population. <br></br>Local actions included creating websites for vaccination information and setting up vaccination sites.",
+            butt: sl8,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                // zoom: 7,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info9',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info9',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '10info',  //2020-10-16
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info10',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info10',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '11info',  //2020-10-16
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info11',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info11',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '12info',
+            title: '7. Public-Private partnerships, March 2021', //2021-03-06
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: "PPPs bring together the expertise and resources of the two sectors in order to provide services or infrastructure at a lower cost. Private organisations manufactured critical medical supplies, supported first responders and healthcare professionals, and provided direct monetary donations. Some big names include <b>Google</b>, <b>CVS</b> and <b>Ford</b>.</br>Some cities partnered with ride hailing companies like <b>Uber</b> and <b>Lyft</b> for free, possibly safer trips to vaccination centres. <br><br> Meanwhile, America saw its first Delta variant case on 23 February, 2021.",
+            butt: sl9,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info12',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info12',
+                    opacity: 0
+                }
+            ]
+        },
+
+
+        {
+            id: '13info',
+
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info13',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info13',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '14info',
+
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info14',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info14',
+                    opacity: 0
+                }
+            ]
+        },
+
+
+        {
+            id: '15info',
+            title: '8. 50% of the country is vaccinated, August 2021',  //2021-08-06
+            butt: sl10,
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: "During a relatively dormant five-month Spring-Summer period, there were two things to note - <br> 1. The Delta variant gradually became the dominant strain in the country, crossing the mark on 7 July. <br> 2. On August 6, more than half of the population was fully vaccinated. <br><br>To rev up the country's sluggish immunisation campaign, cities started offering incentives. In fact, in the NLC dataset, 33% of all vaccination policies in this period were city incentives, ranging from $100 payouts to free haircuts.",
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info15',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info15',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '16info',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info16',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info16',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '17info',
+            title: '9. November 2021, ARPA',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: "The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies. <br><br>  We divided cities in two categories - smaller cities, with populations below a 100k, and larger cities, with populations above a 100k. <b></b>The pandemic has exacerbated pre-existing homelessness issues, and larger cities focused their ARPA budgets on improving affordable housing. 51% of all ARPA policies in larger cities focused on homelessness. <br><br><b>Small cities, big infrastructure problems</b> Small cities have often struggled to find adequate funding to replace and rebuild their critical infrastructure. After the 2008 recession, the TIGER program, along with other huge infrastructure grants, supported needed repairs and long-term transformative investments, along with boosting government spending. Such programs require cities to match grants - which smaller cities couldn’t afford without going over budget, according to Vince Williams, mayor of union city, Georgia, in a conversation with Kathy Maness, president of the NLC. <i>ARPA allocations have finally given smaller cities an opportunity to fix lagging infrastructure issues</i> - with 52% of all small city ARPA policies containing phrases like ‘water infrastructure’, ‘sewage treatment’, ‘broadband’, ‘drainage issues’. In the NLC dataset, half of all smaller city ARPA policies focused on infrastructure.",
+            sec: [slAL, slAS],
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info17',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info17',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '18info',
+            title: '10. Holiday season, December 2021',
+            butt: sl11,
+            description: 'The holiday season welcomed a huge increase in cases, as Omicron quickly replaced the Delta variant as the dominant strain within two weeks of its arrival in the US.',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info18',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info18',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '19info',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info19',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info19',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '20info',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info20',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info20',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '21info',
+            // title: '10.Red! The entire country is affected, January 2021',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'America struggle with Omicron',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info21',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info21',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '22info',
+            title: '10.Red! The entire country is affected, January 2021',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: 'America struggle with Omicron',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info22',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info22',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '23info',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info23',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info23',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '24info',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info24',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info24',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '25info',
+            // title: 'Conclusion',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'issover',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info25',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info25',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '26info',
+            // title: 'Conclusion',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'issover',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info26',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info26',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '27info',
+            title: 'Conclusion',
+            // image: 'images/Chapter_2_Image.jpg',
+            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            description: 'issover',
+            // callback: removeLegend,
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info27',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info27',
+                    opacity: 0
+                }
+            ]
+        },
+
         // {
-        //     id: '8info',
-        //     title: '6. The big Second Wave, December 2020',  //2020-12-05
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "With hospitals struggling to find Intensive Care Unit beds for patients, many cities in the United States imposed lockdowns and business closures in an attempt to contain a wave of illness which was catalysed by November's Thanksgiving gatherings. <br></br>Emergency measures included lockdowns, curfews and mask mandates, as officials urged people not to travel in a rather grim holiday season.",
-        //     butt: sl7,
+        //     id: 'incomeUnderlay1',
+        //     title: 'Forced to work and take the subway',
+        //     image: 'images/Chapter_2_Image.jpg',
+        //     imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+        //     description: 'Income inequality certainly played a role in the uneven distribution of subway usage. By overlaying median household income and change in subway entries it becomes clear that those stations with less change are located in low-income areas, specially in the Bronx and outer Queens and Brooklyn.',
         //     location: {
         //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         // zoom: 7,
+        //         zoom: 3.6,
         //         pitch: 0,
         //         bearing: 0
         //     },
         //     onChapterEnter: [
         //         {
-        //             layer: 'info8',
+        //             layer: 'info7',
         //             opacity: 1
         //         }
         //     ],
         //     onChapterExit: [
         //         {
-        //             layer: 'info8',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '9info',
-        //     title: '7. Vaccination, January 2021',  //2020-12-05
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "After the announcement of the success of Pfizer’s clinical trials for a covid vaccine, <b>“Vaccinations”</b> was by far the most popular policy area, and continued to be for the next 6 months. The first wave of shots went to healthcare workers, as well as some top government officials. By March 12, 2021, The US surpassed 100 million doses, almost 1/3rd of its population. <br></br>Local actions included creating websites for vaccination information and setting up vaccination sites.",
-        //     butt: sl8,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         // zoom: 7,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info9',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info9',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '10info',  //2020-10-16
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info10',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info10',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '11info',  //2020-10-16
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info11',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info11',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '12info',
-        //     title: '7. Public-Private partnerships, March 2021', //2021-03-06
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "PPPs bring together the expertise and resources of the two sectors in order to provide services or infrastructure at a lower cost. Private organisations manufactured critical medical supplies, supported first responders and healthcare professionals, and provided direct monetary donations. Some big names include <b>Google</b>, <b>CVS</b> and <b>Ford</b>.</br>Some cities partnered with ride hailing companies like <b>Uber</b> and <b>Lyft</b> for free, possibly safer trips to vaccination centres. <br><br> Meanwhile, America saw its first Delta variant case on 23 February, 2021.",
-        //     butt: sl9,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info12',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info12',
+        //             layer: 'info7',
         //             opacity: 0
         //         }
         //     ]
         // },
 
 
-        // {
-        //     id: '13info',
 
+
+        // {
+        //     id: 'elmhurstHospital',
+        //     title: 'The epicenter of the outbreak',
+        //     image: 'images/Chapter_3_Image.jpg',
+        //     imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+        //     description: 'Elmhurst Hospital Center has been identified as one of the hospitals most overwhelmed by the number of patients with COVID-19 it has received. Located in a low-middle-income area of the city, with a median household income of around $50,000, the hospital serves one of the most diverse and immigrant dense areas of the city. The three subway stations around the hospital have all seen relatively small change in their usage compare to the rest of the city.',
         //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
+        //         center: [-73.886201, 40.744566],
+        //         zoom: 16,
+        //         pitch: 40,
+        //         bearing: -7
         //     },
         //     onChapterEnter: [
         //         {
-        //             layer: 'info13',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info13',
+        //             layer: 'medianIncome',
         //             opacity: 0
         //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '14info',
-
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info14',
-        //             opacity: 1
-        //         }
         //     ],
         //     onChapterExit: [
         //         {
-        //             layer: 'info14',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-
-        // {
-        //     id: '15info',
-        //     title: '8. 50% of the country is vaccinated, August 2021',  //2021-08-06
-        //     butt: sl10,
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "During a relatively dormant five-month Spring-Summer period, there were two things to note - <br> 1. The Delta variant gradually became the dominant strain in the country, crossing the mark on 7 July. <br> 2. On August 6, more than half of the population was fully vaccinated. <br><br>To rev up the country's sluggish immunisation campaign, cities started offering incentives. In fact, in the NLC dataset, 33% of all vaccination policies in this period were city incentives, ranging from $100 payouts to free haircuts.",
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info15',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info15',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '16info',
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info16',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info16',
+        //             layer: 'medianIncome',
         //             opacity: 0
         //         }
         //     ]
         // },
         // {
-        //     id: '17info',
-        //     title: '9. November 2021, ARPA',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies. <br><br>  We divided cities in two categories - smaller cities, with populations below a 100k, and larger cities, with populations above a 100k. <b></b>The pandemic has exacerbated pre-existing homelessness issues, and larger cities focused their ARPA budgets on improving affordable housing. 51% of all ARPA policies in larger cities focused on homelessness. <br><br><b>Small cities, big infrastructure problems</b> Small cities have often struggled to find adequate funding to replace and rebuild their critical infrastructure. After the 2008 recession, the TIGER program, along with other huge infrastructure grants, supported needed repairs and long-term transformative investments, along with boosting government spending. Such programs require cities to match grants - which smaller cities couldn’t afford without going over budget, according to Vince Williams, mayor of union city, Georgia, in a conversation with Kathy Maness, president of the NLC. <i>ARPA allocations have finally given smaller cities an opportunity to fix lagging infrastructure issues</i> - with 52% of all small city ARPA policies containing phrases like ‘water infrastructure’, ‘sewage treatment’, ‘broadband’, ‘drainage issues’. In the NLC dataset, half of all smaller city ARPA policies focused on infrastructure.",
-        //     sec: [slAL, slAS],
+        //     id: 'southBronx',
+        //     title: 'The South Bronx, as Always',
+        //     image: 'images/Chapter_4_Image.jpg',
+        //     imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+        //     description: "The South Bronx, perennially marred in social injustice, has also been hard hit during the current COVID-19 outbreak. The area's three main neighborhoods, Mott Haven, Melrose and Port Morris are mostly home to low-income families that have been forced to continue going to work, risking their health and that of their loved ones. Similarly to Jackson Heights in Queens, the areas subway stations have seen a smaller decrease in use than the rest of the city. Median household income in this area oscillates between $15,000 and $30,000.",
         //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
+        //         center: [-73.918037, 40.816093],
+        //         zoom: 15,
+        //         pitch: 40,
+        //         bearing: 8
         //     },
         //     onChapterEnter: [
         //         {
-        //             layer: 'info17',
+        //             layer: 'medianIncome',
         //             opacity: 1
         //         }
         //     ],
         //     onChapterExit: [
         //         {
-        //             layer: 'info17',
+        //             layer: 'medianIncome',
         //             opacity: 0
         //         }
         //     ]
-        // },
-
-        // {
-        //     id: '18info',
-        //     title: '10. Holiday season, December 2021',
-        //     butt: sl11,
-        //     description: 'The holiday season welcomed a huge increase in cases, as Omicron quickly replaced the Delta variant as the dominant strain within two weeks of its arrival in the US.',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info18',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info18',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '19info',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info19',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info19',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '20info',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info20',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info20',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '21info',
-        //     // title: '10.Red! The entire country is affected, January 2021',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     // description: 'America struggle with Omicron',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info21',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info21',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '22info',
-        //     title: 'Omicron dethrones delta',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: 'The Omicron variant rapidly swept through America, and it became the dominant strain less than 14 days after the first registered Omicron Case. With the vaccine now available for kids between 5-11, 65% of the country vaccinated,and Omicron proving to have a much lower fatality rate compared to other variants, other than a few mask mandates in major cities, the main focus of city actions was still ARPA.',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info22',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info22',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '23info',
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info23',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info23',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '24info',
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info24',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info24',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '25info',
-        //     // title: 'Conclusion',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     // description: 'issover',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info25',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info25',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '26info',
-        //     // title: 'Conclusion',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     // description: 'issover',
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info26',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info26',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
-        // {
-        //     id: '27info',
-        //     title: 'is it the end of the pandemic phase of covid-19?',
-        //     // image: 'images/Chapter_2_Image.jpg',
-        //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "With the Omicron wave receding almost as quickly as it spread through the country, mask mandates and case numbers are falling throughout the country. It is imperative that local leaders remain prepared for what's next with COVID-19, and to keep using data to communicate and decide future plans of action. Working with the Johns Hopkins Bloomberg School of Public Health, the Bloomberg Harvard City Leadership Initiative, United States Conference of Mayors, and others, Bloomberg Philanthropies is supporting mayors and other local leaders with tools and guidance to help manage the crisis and protect the social and economic well-being of their communities. This includes ongoing technical assistance, coaching, and access to critical public health information. ",
-        //     // callback: removeLegend,
-        //     location: {
-        //         center: [-95.7129, 37.0902],
-        //         zoom: infoZoom,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     onChapterEnter: [
-        //         {
-        //             layer: 'info27',
-        //             opacity: 1
-        //         }
-        //     ],
-        //     onChapterExit: [
-        //         {
-        //             layer: 'info27',
-        //             opacity: 0
-        //         }
-        //     ]
-        // },
-
+        // }
     ]
 };

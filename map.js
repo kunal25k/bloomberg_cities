@@ -69,6 +69,7 @@ if (config.description) {
     var descriptionText = document.createElement('p');
     descriptionText.innerHTML = config.description;
     header.appendChild(descriptionText);
+    // drawLineChartForward();
 }
 
 // If the header has anything in it, it gets appended to the story
@@ -78,14 +79,83 @@ if (header.innerText.length > 0) {
     story.appendChild(header);
 }
 if (config.plugin){
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = '<i>Local actions were reactive to the pandemic</i> <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>     ';
+    header.appendChild(descriptionText);
+
+    // var wrapperINITIALleg = document.createElement("p");
+    // wrapperINITIALleg.setAttribute('id','wrapperINITIALleg');
+    // header.appendChild(wrapperINITIALleg)    
+
+    // drawInitialLegend();
+
     var wrapper1 = document.createElement("div");
     wrapper1.setAttribute('id','wrapper');
-    // wrapper1.innerText = 'euuu';
-    // var width = descriptionText.offsetWidth;
-    var width = window.innerWidth * 0.3;
-    var height = 100;
+
     header.appendChild(wrapper1)
     // drawLineChart();
+    drawLineChartPrev();
+
+    var title_1 = document.createElement('p');
+    title_1.setAttribute('id','title_1');
+    // title_1.classList.add('imageCredit');
+    title_1.innerHTML = 'Figure: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and their <b>Correlated Peaks</b>';
+    // imageCredit.style.color = 'purple';
+    var originalHtml = title_1.innerHTML;
+    var firstStr = 'Number of Prevention Policies'
+    var secondStr = 'Number of Cases'
+    var thirdStr = 'Correlated Peaks'
+    var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
+    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('blue'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#B8ECB8'));
+    title_1.innerHTML = newHtml;
+    header.appendChild(title_1);
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = 'One can identify <b>3</b> peaks in covid cases, and <b>3</b> peaks in prevention policies in the graph above.The first peak of the pandemic, seen in April 2020, corresponds to the largest peak of prevention policies - with as many as <b>65</b> different cities coming out with prevention policies on a single day. <br></br> The first peak saw local actions being taken much earlier than the increase in cases: As America had already seen the spread of the pandemic in countries like China and Italy, cities preemptively planned for the onslaught of COVID.';
+    header.appendChild(descriptionText);
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = '<b>2. While covid cases were on the rise, prevention policy peaks reduced to a straight line.</b>';
+    header.appendChild(descriptionText);
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = "This can be explained by the following -<br>•  With every wave, people's understanding about the disease process increased.<br>•  So people and cities were better equipped due to the policies already in place.<br>•  People's mindsets got adjusted to the ‘new normal’, and they started following the policies already in place.<br>•  Public awareness and cooperation increased<br>•  The cases peaked according to the nature of the strain of virus at the time, but no new policies needed to be in place.";
+    header.appendChild(descriptionText);
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = '<b>3. An Inflection point</b>';
+    header.appendChild(descriptionText);
+    
+
+    var wrapperTWO = document.createElement("div");
+    wrapperTWO.setAttribute('id','wrapperTWO');
+
+    header.appendChild(wrapperTWO)
+    // drawLineChart();
+    drawLineChartPrev1();
+
+    var title_1 = document.createElement('p');
+    title_1.setAttribute('id','title_1');
+    // title_1.classList.add('imageCredit');
+    title_1.innerHTML = 'Figure: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and the <b>Inflection Point</b>';
+    // imageCredit.style.color = 'purple';
+    var originalHtml = title_1.innerHTML;
+    var firstStr = 'Number of Prevention Policies'
+    var secondStr = 'Number of Cases'
+    var thirdStr = 'Correlated Peaks'
+    var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
+    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('blue'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('black'));
+    title_1.innerHTML = newHtml;
+    header.appendChild(title_1);
+
+
+    var descriptionText = document.createElement('p');
+    descriptionText.innerHTML = "In January 2021, we see an inflection point - where the correlation between prevention policies and covid cases ceases to exist. <br> <br>We do see that covid cases themselves didn't peak until September 2021, and had no corresponding peak of prevention policies. Another reason for this drying up of prevention policies was the introduction of COVID vaccines in January 2021.";
+    header.appendChild(descriptionText);
+
 }
 
 
@@ -265,17 +335,138 @@ config.chapters.forEach((record, idx) => {
     }
     // Creates the image credit for the vignette
     if (record.imageCredit) {
-        var imageCredit = document.createElement('p');
-        imageCredit.classList.add('imageCredit');
-        imageCredit.innerHTML = 'Image credit: ' + record.imageCredit;
-        chapter.appendChild(imageCredit);
+        // var imageCredit = document.createElement('div');
+        // imageCredit.setAttribute('id','imageCredit');
+        // imageCredit.classList.add('imageCredit');
+        // imageCredit.innerHTML = 'Image credit: ' + record.imageCredit;
+        // chapter.appendChild(imageCredit);
     }
+    if (record.graph){
+
+        console.log(record.graph[6])
+
+        // var wrapper44 = document.createElement("p");
+        // wrapper44.setAttribute('id','wrapper44');
+        // chapter.appendChild(wrapper44)    
+
+        // record.graph[0]()
+
+        if (record.graph[6]=='first'){
+            var wrapperFIRSTleg = document.createElement("p");
+            wrapperFIRSTleg.setAttribute('id','wrapperFIRSTleg');
+            chapter.appendChild(wrapperFIRSTleg)    
+
+            var wrapperFIRST = document.createElement("div");
+            wrapperFIRST.setAttribute('id','wrapperFIRST');
+            chapter.appendChild(wrapperFIRST)
+        }
+
+        if (record.graph[6]=='second'){
+            var wrapperSECONDleg = document.createElement("p");
+            wrapperSECONDleg.setAttribute('id','wrapperSECONDleg');
+            chapter.appendChild(wrapperSECONDleg)    
+
+            var wrapperSECOND = document.createElement("div");
+            wrapperSECOND.setAttribute('id','wrapperSECOND');
+            chapter.appendChild(wrapperSECOND)
+        }
+
+        if (record.graph[6]=='third'){
+            var wrapperTHIRDleg = document.createElement("p");
+            wrapperTHIRDleg.setAttribute('id','wrapperTHIRDleg');
+            chapter.appendChild(wrapperTHIRDleg)    
+
+            var wrapperTHIRD = document.createElement("div");
+            wrapperTHIRD.setAttribute('id','wrapperTHIRD');
+            chapter.appendChild(wrapperTHIRD)
+        }
+
+        if (record.graph[6]=='reopen'){
+            var wrapperREOPENleg = document.createElement("p");
+            wrapperREOPENleg.setAttribute('id','wrapperREOPENleg');
+            chapter.appendChild(wrapperREOPENleg)    
+
+            var wrapperREOPEN = document.createElement("div");
+            wrapperREOPEN.setAttribute('id','wrapperREOPEN');
+            chapter.appendChild(wrapperREOPEN)
+        }
+
+        if (record.graph[6]=='arpa'){
+            var wrapperARPAleg = document.createElement("p");
+            wrapperARPAleg.setAttribute('id','wrapperARPAleg');
+            chapter.appendChild(wrapperARPAleg)    
+
+            var wrapperARPA = document.createElement("div");
+            wrapperARPA.setAttribute('id','wrapperARPA');
+            chapter.appendChild(wrapperARPA)
+        }
+
+        if (record.graph[6]=='vaxx'){
+            var wrapperVAXleg = document.createElement("p");
+            wrapperVAXleg.setAttribute('id','wrapperVAXleg');
+            chapter.appendChild(wrapperVAXleg)    
+
+            var wrapperVAX = document.createElement("div");
+            wrapperVAX.setAttribute('id','wrapperVAX');
+            chapter.appendChild(wrapperVAX)
+        }
+
+        record.graph[0]()
+
+        record.graph[1]()
+
+        var imageCredit = document.createElement('p');
+        imageCredit.setAttribute('id','imageCredit');
+        imageCredit.classList.add('imageCredit');
+        imageCredit.innerHTML = 'Figure: ' + record.imageCredit;
+        // imageCredit.style.color = 'purple';
+        var originalHtml = imageCredit.innerHTML;
+        var firstStr = record.graph[4]
+        var secondStr = record.graph[5]
+        var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor(record.graph[2]));
+        var newHtml = newHtml.replace(secondStr, secondStr.fontcolor(record.graph[3]));
+        imageCredit.innerHTML = newHtml;
+        chapter.appendChild(imageCredit);
+
+    
+        // const bounds = wrapper1.append("g")
+        //     .style("transform", `translate(${
+        //       dimensions.margin.left
+        //     }px, ${
+        //       dimensions.margin.top
+        //     }px)`)
+      
+       }
+    
+
     // Creates the description for the vignette
     if (record.description) {
         var story = document.createElement('p');
         story.innerHTML = record.description;
         chapter.appendChild(story);
     }
+
+
+   ////
+ 
+   ////
+
+        //BUTTONS!!!
+    // if (record.graph) {
+
+        // const wrapper = d3.select("#wrapper")
+        //    .append('center')
+        //    .append("svg")
+        //    .attr("width", dimensions.width)
+        //     .attr("height", dimensions.height)
+
+        //     var storyPolicy = document.createElement('p');
+        // storyPolicy.innerHTML = record.butt.policy;
+        // storyPolicy.classList.add('policy');
+        // chapter.appendChild(storyPolicy);     
+
+        // }
+
     //BUTTONS!!!
     if (record.butt) {
         var buttTextLeft = document.createElement('span');
@@ -493,6 +684,7 @@ map.on("load", function () {
 
     layerAdder(dateArray);
 
+    // var fns = [drawLineChartPrev,drawLineChartForward];
     // Setup the instance, pass callback functions
     scroller
         .setup({
@@ -513,6 +705,10 @@ map.on("load", function () {
             }
             // if (chapter.callback == 'removeLegend') {
             //     removeLegend();
+            // }
+            // if(chapter.graph.includes('draw')) {
+                // fns[parseInt(chapter.graph[4])]()
+                // drawLineChartPrev()
             // }
             if (chapter.callback == 'addLegend') {
                 addLegend();
@@ -573,6 +769,7 @@ function layerAdder(dateColumn) {
 }
 
 const collection = document.getElementsByClassName("step");
+
 // // console.log(collection[0])
 var x = collection
 // console.log(x[4])
