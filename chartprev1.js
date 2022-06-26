@@ -296,14 +296,14 @@ async function drawLineChartPrev1() {
       // .attr("transform", "rotate(-20)");
 
       const begin_focus0 = xScale(Date.parse("January 15, 2021"))
-      const end_focus0 = xScale(Date.parse("January 20, 2021")) - begin_focus0
+      const end_focus0 = xScale(Date.parse("January 17, 2021")) - begin_focus0
     
       const boilingTemperatures0 = bounds.append("rect")
           .attr("y", 0)
           .attr("height", dimensions.boundedHeight)
           .attr("x", begin_focus0)
           .attr("width", end_focus0)
-          .attr("fill", "black")
+          .attr("fill", "green")
           // .attr('opacity','40%')
     
 

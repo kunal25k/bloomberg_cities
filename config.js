@@ -149,14 +149,14 @@ var slAL = [obAL_1, obAL_2, obAL_3, obAL_4, obAL_5];
 
 var config = {    
     accessToken: 'pk.eyJ1Ijoia3VuYWwyNWsiLCJhIjoiY2wzZXk5aHV6MDJxNjNrcWkzc3NmbmZsbSJ9.doJOBOpo8o2JpjQL1cCsNQ',
-    style: 'mapbox://styles/kunal25k/cl3f3k2yq001n15pkeduqy8ew', //light
-    // style: 'mapbox://styles/kunal25k/cl3nyck2d005v15o4er1jluqu', // dark
-    theme: 'light',
+    // style: 'mapbox://styles/kunal25k/cl3f3k2yq001n15pkeduqy8ew', //light
+    style: 'mapbox://styles/kunal25k/cl3nyck2d005v15o4er1jluqu', // dark
+    theme: 'dark',
     plugin: 'yes',
     // inset: true,
     // projection: 'equirectangular',
     alignment: 'right',
-    toptitle: 'Bloomberg Philanthropies | National League of Cities | NYU CUSP',
+    // toptitle: 'Bloomberg Philanthropies | National League of Cities | NYU CUSP',
     title: '4871 policies and 800 cities - How the pandemic shaped city actions in America',
     byline: 'Kunal Kulkarni',
     // description: '<p>This tutorial demonstrates how to use <a href="https://github.com/mapbox/storytelling">Mapbox Storytelling</a> with our previous web mapping example. Here we will use Mapbox storytelling template to first, give an overview of the decrease in subway usage around the city, and second, zoom into three different locations that exemplify the diversity of conditions around New York.</p><p>We will use the <a href="https://pointsunknown.nyc/web%20mapping/mapbox/2020/03/25/10_WebmappingTurnstileData.html">previous web map displaying MTA turnstile data</a> as the basis for our story. In this process we will use Mapbox GL JS, as well as Intersection Observer and Scrollama as our main JavaScript libraries.</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p>',
@@ -169,7 +169,7 @@ var config = {
             title: '1. COVID-19 arrives on American Shores, March 2020', // 2020-03-20
             // image: 'images/chevron.png',
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            description: 'On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.', //That’s 35% of all local covid actions to date!
+            description: '<span>On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.<span>', //That’s 35% of all local covid actions to date!
             butt: sl1,
             graph : [drawFirstLegend,drawLineChartFirst, 'blue', 'red', 'Cases' ,'Prevention Policies','first'],
             callback: 'addLegend',
@@ -194,7 +194,50 @@ var config = {
             ]
         },
         {
-            id: '1info',
+            id: '1info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info1',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info1',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '2info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info2',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info2',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '3info',
             title: '2. Re-Opening, April 2020', // 2020-04-10
             // image: 'images/Chapter_1_Image.jpg',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
@@ -212,20 +255,62 @@ var config = {
             onChapterEnter: [
                 
                 {
-                    layer: 'info1',
+                    layer: 'info3',
                     opacity: 1,
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info1',
+                    layer: 'info3',
                     opacity: 0,
                 }
             ]
         },
-        // INTERMEDIATE LAYERS
         {
-            id: '2info',
+            id: '4info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info4',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info4',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '5info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info5',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info5',
+                    opacity: 0
+                }
+            ]
+        },
+
+        {
+            id: '6info',
             // hidden: true,
             callback: addLegend,
             // butt: sl3,
@@ -243,21 +328,126 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info2',
+                    layer: 'info6',
                     opacity: 1,
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info2',
+                    layer: 'info6',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '7info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info7',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info7',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '8info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info8',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info8',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '9info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info9',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info9',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '10info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info10',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info10',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '11info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info11',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info11',
                     opacity: 0
                 }
             ]
         },
 
-        // normal layers
+
         {
-            id: '3info',   //2020-08-01
+            id: '12info',   //2020-08-01
             title: '4. Prevention (3), August 2020',
             butt: sl7,
             imageCredit: '<b>Third Policies</b> and <b>Cases</b>',
@@ -273,25 +463,20 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info3',
+                    layer: 'info12',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info3',
+                    layer: 'info12',
                     opacity: 0
                 }
             ]
         },
 
         {
-            id: '4info',   //2020-08-01
-            // title: '4. The Southern spread, August 2020',
-            // butt: sl4,
-            // image: 'images/Chapter_2_Image.jpg',
-            // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            // description: 'As the South saw a pronounced increase in cases, Miami, Dallas, Austin, Jacksonville, Atlanta, Memphis and San Antonio developed as hotspots. In all emergency action policies, 60% of the southern cities had the phrase ‘extension’, as compared to 30% of the rest of the cities.<br></br><b>Flattening the Curve </b><br></br>After the focus on reopening in the previous months, city focuses shifted to adapting to pre-pandemic lifestyles without causing more spikes in cases - flattening the curve. In the 2 month window from June to August 2020, <i>Prevention</i> and <i>Housing</i> emerged as the two highest occurring policy areas. ‘Prevention’ is a very broad topic though - it includes cities pushing programs and actions mandating masks, social distancing policies as well as extending a state of emergency. Almost 50% of all prevention policies contained the word ‘mask’ - either urging people to wear masks, or mandating masks in public spaces. <br></br> Majority of the housing policies are also seen in this time period, as especially larger cities dealt with an acute increase in homelessness',
+            id: '13info',   //2020-08-01
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -300,20 +485,62 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info4',
+                    layer: 'info13',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info4',
+                    layer: 'info13',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '14info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info14',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info14',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '15info',   //2020-08-01
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info15',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info15',
                     opacity: 0
                 }
             ]
         },
 
         {
-            id: '5info',  //2020-10-16
+            id: '16info',  //2020-10-16
             title: '5. Vaccination, October 2020',
             butt: sl8,
             imageCredit: '<b>Vaccination Policies</b> and <b>Cases</b>',
@@ -328,20 +555,20 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info5',
+                    layer: 'info16',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info5',
+                    layer: 'info16',
                     opacity: 0
                 }
             ]
         },
 
         {
-            id: '6info',  //2020-10-16
+            id: '17info',  //2020-10-16
             // title: '5. The Dakotas, October 2020',
             // butt: sl8,
             // // image: 'images/rushmore.jpg',
@@ -355,21 +582,125 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info6',
+                    layer: 'info17',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info6',
+                    layer: 'info17',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '18info',  //2020-10-16
+            // title: '5. The Dakotas, October 2020',
+            // butt: sl8,
+            // // image: 'images/rushmore.jpg',
+            // // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info18',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info18',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '19info',  //2020-10-16
+            // title: '5. The Dakotas, October 2020',
+            // butt: sl8,
+            // // image: 'images/rushmore.jpg',
+            // // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info19',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info19',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: '20info',  //2020-10-16
+            // title: '5. The Dakotas, October 2020',
+            // butt: sl8,
+            // // image: 'images/rushmore.jpg',
+            // // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info20',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info20',
                     opacity: 0
                 }
             ]
         },
 
+        {
+            id: '21info',  //2020-10-16
+            // title: '5. The Dakotas, October 2020',
+            // butt: sl8,
+            // // image: 'images/rushmore.jpg',
+            // // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
+            // description: 'With no mask mandates and only two cities having some sort of covid regulation (limiting gatherings of more than 10 people), North and South Dakota saw an unprecedented covid outbreak. A traditionally republican voter base, South Dakota saw a huge Trump rally in July at Mount Rushmore, with thousands of people turning up. Another event attributed as a super spreader by the CDC, the Sturgis motorcycle rally in August saw hundreds of thousands of visitors. Hospitals were so short-staffed that North Dakota had to allow healthcare workers who had tested positive to continue working.',
+            location: {
+                center: [-95.7129, 37.0902],
+                zoom: infoZoom,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'info21',
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'info21',
+                    opacity: 0
+                }
+            ]
+        },
 
         {
-            id: '7info',  //2020-10-16
+            id: '22info',  //2020-10-16
             title: '6. ARPA, November 2020',
             sec: [slAL, slAS],
             // callback: removeLegend,
@@ -384,13 +715,13 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'info7',
+                    layer: 'info22',
                     opacity: 1
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'info7',
+                    layer: 'info22',
                     opacity: 0
                 }
             ]
@@ -398,11 +729,11 @@ var config = {
 
         // {
         //     id: '8info',
-        //     title: '6. The big Second Wave, December 2020',  //2020-12-05
+        //     // title: '6. The big Second Wave, December 2020',  //2020-12-05
         //     // image: 'images/Chapter_2_Image.jpg',
         //     // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-        //     description: "With hospitals struggling to find Intensive Care Unit beds for patients, many cities in the United States imposed lockdowns and business closures in an attempt to contain a wave of illness which was catalysed by November's Thanksgiving gatherings. <br></br>Emergency measures included lockdowns, curfews and mask mandates, as officials urged people not to travel in a rather grim holiday season.",
-        //     butt: sl7,
+        //     // description: "With hospitals struggling to find Intensive Care Unit beds for patients, many cities in the United States imposed lockdowns and business closures in an attempt to contain a wave of illness which was catalysed by November's Thanksgiving gatherings. <br></br>Emergency measures included lockdowns, curfews and mask mandates, as officials urged people not to travel in a rather grim holiday season.",
+        //     // butt: sl7,
         //     location: {
         //         center: [-95.7129, 37.0902],
         //         zoom: infoZoom,
@@ -412,13 +743,13 @@ var config = {
         //     },
         //     onChapterEnter: [
         //         {
-        //             layer: 'info8',
+        //             layer: 'info6',
         //             opacity: 1
         //         }
         //     ],
         //     onChapterExit: [
         //         {
-        //             layer: 'info8',
+        //             layer: 'info6',
         //             opacity: 0
         //         }
         //     ]

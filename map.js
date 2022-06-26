@@ -144,10 +144,10 @@ if (config.plugin){
     var originalHtml = title_1.innerHTML;
     var firstStr = 'Number of Prevention Policies'
     var secondStr = 'Number of Cases'
-    var thirdStr = 'Correlated Peaks'
+    var thirdStr = 'Inflection Point'
     var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
     var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('blue'));
-    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('black'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('green'));
     title_1.innerHTML = newHtml;
     header.appendChild(title_1);
 
@@ -679,10 +679,13 @@ map.on("load", function () {
 
 
     //                 0            1               2           3              4                5               6              7            8           9     10            11          12              13          14          15              16          17              18          19          20          21                 22     23            24          25
-    var dateArray = ['2020-03-20','2020-04-10', '2020-06-22', '2020-08-01','2020-09-18', '2020-10-16','2020-10-25','2020-11-12', '2020-12-05', '2021-01-01' ,'2021-01-25','2021-02-18', '2021-03-06','2021-05-06','2021-07-06','2021-07-15','2021-09-30','2021-11-01', '2021-12-20','2022-01-01','2022-01-10','2022-01-16','2022-02-01','2022-02-07','2022-02-28','2022-03-05','2022-03-15','2022-05-01'];
+    // var dateArray = ['2020-03-20','2020-04-10', '2020-06-22', '2020-08-01','2020-09-18', '2020-10-16','2020-10-25','2020-11-12', '2020-12-05', '2021-01-01' ,'2021-01-25','2021-02-18', '2021-03-06','2021-05-06','2021-07-06','2021-07-15','2021-09-30','2021-11-01', '2021-12-20','2022-01-01','2022-01-10','2022-01-16','2022-02-01','2022-02-07','2022-02-28','2022-03-05','2022-03-15','2022-05-01'];
     //               first cases,  water0,    reopening,   SE spread,        in bw         dakotas       in bw     schools     second wave      vax 50%,              omicron dom    omicron crazy
-
+    //                  prev1                                  reop                                    prev2                                                                        prev3                                                 vax                                    arpa
+    var dateArray = ['2020-04-25','2020-05-05','2020-05-15','2020-05-27','2020-06-10','2020-07-15', '2020-08-01','2020-08-20','2020-09-14','2020-09-27','2020-10-25','2020-11-21','2020-12-15','2021-01-15','2021-02-15','2021-03-01','2021-07-06','2021-08-01','2021-08-20','2021-09-05','2021-09-30','2022-01-15', '2022-02-01'];
+    // var dateArray = ['2021-01-15','2021-02-15', '2021-03-01', '2021-07-06'];
     layerAdder(dateArray);
+    // 11-01, 12-20
 
     // var fns = [drawLineChartPrev,drawLineChartForward];
     // Setup the instance, pass callback functions
@@ -737,7 +740,8 @@ function layerAdder(dateColumn) {
 
         // console.log(dateColumn.length)                                       //white         //cyan          //lightblue     //yellow         //orange         //pink           //red
         // R=[ 'interpolate', ['linear'],['number',['get',  dateColumn[i]]], 0, "#ffffff", 300, "#00FFFF", 600, "#1AA7EC", 1000, "#FFFF00", 1500, '#FFA500', 2000, '#FFC0CB', 2800, '#FF0000']//, 100, "#fd8d3c", -66, "#feb24c", -50, "#fed976", -33, "#ffeda0", -16, "#ffffcc", 0, "#ffffff"]
-        R=[ 'interpolate', ['linear'],['number',['get',  dateColumn[i]]], 0, "#ffffff", 300, "#00FFFF", 600, "#6ded97", 1000, "#c9ca2b", 1500, '#efa300', 2000, '#ff7600', 3000, '#ff4100', 4200,'#A020F0']//, 100, "#fd8d3c", -66, "#feb24c", -50, "#fed976", -33, "#ffeda0", -16, "#ffffcc", 0, "#ffffff"]
+        // R=[ 'interpolate', ['linear'],['number',['get',  dateColumn[i]]], 0, "#ffffff", 300, "#00FFFF", 600, "#6ded97", 1000, "#c9ca2b", 1500, '#efa300', 2000, '#ff7600', 3000, '#ff4100', 4200,'#A020F0']//, 100, "#fd8d3c", -66, "#feb24c", -50, "#fed976", -33, "#ffeda0", -16, "#ffffcc", 0, "#ffffff"]
+        R=[ 'interpolate', ['linear'],['number',['get',  dateColumn[i]]], 0, "#2a2a2a", 300, "#00FFFF", 600, "#6ded97", 1000, "#c9ca2b", 1500, '#efa300', 2000, '#ff7600', 3000, '#ff0000'] //, 4200,'#A020F0']//, 100, "#fd8d3c", -66, "#feb24c", -50, "#fed976", -33, "#ffeda0", -16, "#ffffcc", 0, "#ffffff"]
         // light ^^^
         // R=[ 'interpolate', ['linear'],['number',['get',  dateColumn[i]]], 0, "#2a2c2c", 300, "#00FFFF", 600, "#6ded97", 1000, "#c9ca2b", 1500, '#efa300', 2000, '#ff7600', 2800, '#ff4100']//, 100, "#fd8d3c", -66, "#feb24c", -50, "#fed976", -33, "#ffeda0", -16, "#ffffcc", 0, "#ffffff"]
         // dark ^^^
@@ -747,7 +751,8 @@ function layerAdder(dateColumn) {
             'type': 'fill',
             'source': {
                 'type': 'geojson',
-                'data': 'data/limited_gdf12.geojson'
+                // 'data': 'data/master_gdf.geojson'
+                'data': 'data/limited_gdf13.geojson'
             },
             'opacity': 0,
             'paint': {
@@ -773,24 +778,36 @@ const collection = document.getElementsByClassName("step");
 // // console.log(collection[0])
 var x = collection
 // console.log(x[4])
+x[1].classList.add('fino');
+x[2].classList.add('fino');
+
 x[4].classList.add('fino');
+x[5].classList.add('fino');
 
-x[6].classList.add('fino');
+x[7].classList.add('fino4');
+x[8].classList.add('fino4');
+x[9].classList.add('fino4');
+x[10].classList.add('fino4');
+x[11].classList.add('fino4');
 
-x[10].classList.add('fino2');
-x[11].classList.add('fino2');
+x[13].classList.add('fino3');
+x[14].classList.add('fino3');
+x[15].classList.add('fino3');
 
-x[13].classList.add('fino2');
-x[14].classList.add('fino2');
+x[17].classList.add('fino4');
+x[18].classList.add('fino4');
+x[19].classList.add('fino4');
+x[20].classList.add('fino4');
+x[21].classList.add('fino4');
 
-x[16].classList.add('fino');
+// x[16].classList.add('fino');
 
-x[19].classList.add('fino3');
-x[20].classList.add('fino3');
-x[21].classList.add('fino3');
+// x[19].classList.add('fino3');
+// x[20].classList.add('fino3');
+// x[21].classList.add('fino3');
 
-x[23].classList.add('fino4');
-x[24].classList.add('fino4');
-x[25].classList.add('fino4');
-x[26].classList.add('fino4');
+// x[23].classList.add('fino4');
+// x[24].classList.add('fino4');
+// x[25].classList.add('fino4');
+// x[26].classList.add('fino4');
 // console.log(x[4].className);
