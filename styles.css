@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'BWHaasText';
+    src: url('fonts/NeueHaasUnica-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'BWHaasBold';
+    src: url('fonts/bw-haas-head-75-bold.woff.ttf');
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -85,14 +95,29 @@ body {
   }
   #header h1 {
 	  font-weight: 700;
-	  text-transform: uppercase;
+	  /* text-transform: uppercase; */
 	  /* font-family: 'Merriweather', serif; */
-	  font-family: sans-serif;
+	  /* font-family: sans-serif; */
+	  font-family: 'BWHaasBold';
 	  /* font-family: 'BWHaasDingbat', 'BWHaasHead', "Helvetica Neue", Helvetica, Arial, sans-serif; */
-	  text-align: left;
+	  /* text-align: left; */
+	  text-align: center;
 	  margin: auto;
 	  max-width: 600px;
   }
+  #header p.clout {
+	font-weight: 300;
+	/* text-transform: uppercase; */
+	/* font-family: 'Merriweather', serif; */
+	/* font-family: sans-serif; */
+	font-family: 'BWHaasText';
+	/* font-family: 'BWHaasDingbat', 'BWHaasHead', "Helvetica Neue", Helvetica, Arial, sans-serif; */
+	/* text-align: left; */
+	text-align: center;
+	margin: auto;
+	max-width: 600px;
+}
+
   #header h4 {
 	  font-family: 'Roboto Condensed', sans-serif;
 	  font-weight: 300;
@@ -108,8 +133,8 @@ body {
 	  margin: 0.5em auto 0.8em auto;
   }
   #header p {
-	  font-family: "BWHaasGrotesk-55Roman-Web", sans-serif;
-	  /* font-family: sans-serif; */
+	  /* font-family: "BWHaasText", sans-serif; */
+	  font-family: sans-serif;
 	  font-weight: 400;
 	  text-align: left;
 	  font-size: 1.2em;
@@ -185,7 +210,8 @@ body {
 	-webkit-transform: rotate(-45deg);
   } */
   a, a:hover, a:visited {
-	color: #e96138;
+	/* color: #e96138; */
+	color:#fafafa;
   }
 
   .centered {

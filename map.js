@@ -60,10 +60,17 @@ if (config.title) {
     header.appendChild(titleText);
 }
 if (config.byline) {
-    var bylineText = document.createElement('p');
+    var bylineText = document.createElement('h3');
     bylineText.classList.add("byline");
     bylineText.innerText = config.byline;
     header.appendChild(bylineText);
+}
+if (config.clout) {
+    var cloutText = document.createElement('p');
+    cloutText.classList.add('clout');
+    cloutText.innerHTML = config.clout;
+    header.appendChild(cloutText);
+    // drawLineChartForward();
 }
 if (config.description) {
     var descriptionText = document.createElement('p');
