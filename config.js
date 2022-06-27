@@ -156,6 +156,7 @@ var config = {
     // inset: true,
     // projection: 'equirectangular',
     alignment: 'right',
+    initialGraphic: true,
     // toptitle: 'Bloomberg Philanthropies | National League of Cities | NYU CUSP',
     title: 'City Policies were Reactive to the Pandemic - How the pandemic shaped local actions in America',
     // byline: 'Story by Kunal Kulkarni and Manisha Mirchandani Graphics by Kunal Kulkarni',
@@ -167,7 +168,7 @@ var config = {
     chapters: [
         {
             id: '0info',
-            title: '1. COVID-19 arrives on American Shores, March 2020', // 2020-03-20
+            title: '(1/6) The First Wave, April 2020', // 2020-03-20
             // image: 'images/chevron.png',
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
             description: '<span>On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.<span>', //That’s 35% of all local covid actions to date!
@@ -239,14 +240,14 @@ var config = {
 
         {
             id: '3info',
-            title: '2. Re-Opening, April 2020', // 2020-04-10
+            title: '(2/6) Re-Opening, May 2020', // 2020-04-10
             // image: 'images/Chapter_1_Image.jpg',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: '<b>Reopening</b> policies spiked in June 2020, when the first wave had sort of plateaued before rising up again. This indicates that the laxing of policies/ loosening up lockdown policies were strongly correlated with the rise in cases.',
             callback: 'addLegend',
-            imageCredit: '<b>Re-Opening Policies</b> and <b>Cases</b>',
+            imageCredit: 'Re-Opening Policies and <b>Cases</b>',
             butt: sl3,
-            graph : [drawReOpeningLegend,drawLineChartReOpening, 'blue', 'purple', 'Cases' ,'Re-Opening Policies','reopen'],
+            graph : [drawReOpeningLegend,drawLineChartReOpening, 'blue', 'red', 'Cases' ,'Re-Opening Policies','reopen'],
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -315,7 +316,7 @@ var config = {
             // hidden: true,
             callback: addLegend,
             // butt: sl3,
-            title: '3. Prevention (2), June 2020',
+            title: '(3/6) The Second Wave, August 2020',
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
             graph : [drawSecondLegend,drawLineChartSecond, 'blue', 'red', 'Cases' ,'Prevention Policies','second'],
             // image: 'images/Chapter_2_Image.jpg',
@@ -449,9 +450,9 @@ var config = {
 
         {
             id: '12info',   //2020-08-01
-            title: '4. Prevention (3), August 2020',
+            title: '(4/6) The Third Wave, December 2020',
             butt: sl7,
-            imageCredit: '<b>Third Policies</b> and <b>Cases</b>',
+            imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
             graph : [drawThirdLegend,drawLineChartThird, 'blue', 'red', 'Cases' ,'Prevention Policies','third'],
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
@@ -542,7 +543,7 @@ var config = {
 
         {
             id: '16info',  //2020-10-16
-            title: '5. Vaccination, October 2020',
+            title: '(5/6) Vaccination, April 2021',
             butt: sl8,
             imageCredit: '<b>Vaccination Policies</b> and <b>Cases</b>',
             // callback: addLegend,
@@ -702,7 +703,7 @@ var config = {
 
         {
             id: '22info',  //2020-10-16
-            title: '6. ARPA, November 2020',
+            title: '(6/6) ARPA, December 2021',
             sec: [slAL, slAS],
             // callback: removeLegend,
             imageCredit: '<b>ARPA Policies</b> and <b>Cases</b>',

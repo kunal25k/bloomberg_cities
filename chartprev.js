@@ -43,8 +43,8 @@ async function drawLineChartPrev() {
   // 2. Create chart dimensions
   // console.log(window.innerWidth)
 
-  let box = document.querySelector('h1');
-  console.log(box.offsetWidth);
+  let box = document.querySelector('p');
+  // console.log(box.offsetWidth);
 
   let dimensions = {
     width: box.offsetWidth * 0.95,
@@ -110,8 +110,9 @@ async function drawLineChartPrev() {
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus0)
       .attr("width", end_focus0)
-      .attr("fill", "#B8ECB8")
-      .attr('opacity','40%')
+      // .attr("fill", "#B8ECB8")
+      .attr("fill", "#39FF14")
+      .attr('opacity','90%')
 
   const begin_focus1 = xScale(Date.parse("June 18, 2020"))
   const end_focus1 = xScale(Date.parse("August 18, 2020")) - begin_focus1
@@ -121,8 +122,9 @@ async function drawLineChartPrev() {
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus1)
       .attr("width", end_focus1)
-      .attr("fill", "#B8ECB8")
-      .attr('opacity','40%')
+      // .attr("fill", "#B8ECB8")
+      .attr("fill", "#39FF14")
+      .attr('opacity','90%')
 
   const begin_focus2 = xScale(Date.parse("November 8, 2020"))
   const end_focus2 = xScale(Date.parse("January 1, 2021")) - begin_focus2
@@ -132,8 +134,9 @@ async function drawLineChartPrev() {
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus2)
       .attr("width", end_focus2)
-      .attr("fill", "#B8ECB8")
-      .attr('opacity','40%')
+      // .attr("fill", "#B8ECB8")
+      .attr("fill", "#39FF14")
+      .attr('opacity','90%')
 
     // 5. Draw data
   const lineGeneratorCases = d3.line()
@@ -255,11 +258,43 @@ async function drawLineChartPrev() {
 
   const yAxisGenerator = d3.axisLeft()
     .scale(yScale)
-    .ticks(0)
+    // .ticks(0)
     .tickSize(0)
+    .tickFormat(function(date){
+      if (dimensions.width > 400){
+        if (date > 20 && date < 28){
+          return 'Number of Policies →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+    }}
+    else{
+      if (date > 30 && date < 40){
+        return 'Number of Policies →';
+      }
+    else {
+      return d3.timeFormat('')(date);
+    }}
+  })
+
+  //   .tickFormat(function(date){
+  //     if (date > 25 && date < 35){
+  //       return 'Number of Policies/Cases →';
+  //     }
+  //   else {
+  //     return d3.timeFormat('')(date);
+  //   }
+  // })
+
 
   const yAxis = bounds.append("g")
     .call(yAxisGenerator)
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    // .attr("dx", "1.1em")
+    .attr("dy", "-1.1em")
+    .attr("transform", "rotate(-90)");
+
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)

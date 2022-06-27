@@ -131,8 +131,8 @@ async function drawLineChartThird() {
         .attr("height", dimensions.boundedHeight)
         .attr("x", begin_focus2)
         .attr("width", end_focus2)
-        .attr("fill", "#B8ECB8")
-        .attr('opacity','40%')
+        .attr("fill", "#39FF14")
+        .attr('opacity','90%')
   
       // 5. Draw data
     const lineGeneratorCases = d3.line()
@@ -254,11 +254,26 @@ async function drawLineChartThird() {
   
     const yAxisGenerator = d3.axisLeft()
       .scale(yScale)
-      .ticks(0)
+      // .ticks(0)
       .tickSize(0)
+      .tickFormat(function(date){
+        if (date > 30 && date < 40){
+          return 'Number of Policies/Cases →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+      }
+    })
+
   
     const yAxis = bounds.append("g")
       .call(yAxisGenerator)
+      .selectAll("text")	
+      .style("text-anchor", "end")
+      // .attr("dx", "1.1em")
+      .attr("dy", "-0.5em")
+      .attr("transform", "rotate(-90)");  
+
   
     const xAxisGenerator = d3.axisBottom()
       .scale(xScale)

@@ -97,6 +97,7 @@ body {
   }
   #header h1 {
 	  font-weight: 700;
+	  font-size: 3.25 rem;
 	  /* text-transform: uppercase; */
 	  /* font-family: 'Merriweather', serif; */
 	  /* font-family: sans-serif; */
@@ -105,7 +106,7 @@ body {
 	  /* text-align: left; */
 	  text-align: center;
 	  margin: auto;
-	  max-width: 600px;
+	  max-width: 1000px;
   }
   #header p.clout {
 	font-weight: 300;
@@ -117,6 +118,7 @@ body {
 	/* text-align: left; */
 	text-align: center;
 	margin: auto;
+	margin-bottom: 2em;
 	max-width: 600px;
 }
 
@@ -148,6 +150,13 @@ body {
 	font-size: 0.9em;
 	margin-top: 1px;
 	margin-bottom: 0px;
+  }
+  #header #title_2 {
+	font-size: 0.7em;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	text-align: center;
+	padding-bottom: 3px;
   }
   #features h3 {
 	  font-weight: 700;
@@ -266,13 +275,13 @@ body {
 	opacity: 0;
   }  
   .step.fino3 {
-	padding-top: 3vh;
-	padding-bottom: 3vh;
+	padding-top: 2vh;
+	padding-bottom: 1.5vh;
 	opacity: 0;
   }  
   .step.fino4 {
-	padding-top: 0.5vh;
-	padding-bottom: 1vh;
+	padding-top: 0.25vh;
+	padding-bottom: 0vh;
 	opacity: 0;
   }
   .step img {
@@ -317,6 +326,10 @@ body {
 		padding-bottom: 1%;  
 		color: white;
 	} 
+
+	#wrapperINITIAL {
+		padding: 0px;
+	}
 
 	#wrapper svg {
 		padding: 0px;

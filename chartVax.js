@@ -235,10 +235,43 @@ async function drawLineChartVax() {
   const yAxisGenerator = d3.axisLeft()
     .scale(yScale)
     .tickSize(0)
-    .ticks(0)
+    // .ticks(0)
+    .tickFormat(function(date){
+      if (dimensions.width > 400){
+        if (date > 17 && date < 20){
+          return 'Number of Policies →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+    }}
+    else{
+      if (date > 30 && date < 40){
+        return '';
+      }
+    else {
+      return d3.timeFormat('')(date);
+    }}
+  })
+
+
+  //   .tickFormat(function(date){
+  //     if (date > 17 && date < 20){
+  //       return 'Number of Policies/Cases →';
+  //     }
+  //   else {
+  //     return d3.timeFormat('')(date);
+  //   }
+  // })
 
   const yAxis = bounds.append("g")
     .call(yAxisGenerator)
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    .attr("dx", "3.5em")
+    .attr("dy", "-0.5em")
+    .attr("transform", "rotate(-90)");  
+
+    
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)

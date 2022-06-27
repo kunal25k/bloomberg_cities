@@ -234,11 +234,43 @@ async function drawLineChartARPA() {
 
   const yAxisGenerator = d3.axisLeft()
     .scale(yScale)
-    .ticks(0)
+    // .ticks(0)
     .tickSize(0)
+    .tickFormat(function(date){
+      if (dimensions.width > 400){
+        if (date > 20 && date < 23){
+          return 'Number of Policies →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+    }}
+    else{
+      if (date > 30 && date < 40){
+        return '';
+      }
+    else {
+      return d3.timeFormat('')(date);
+    }}
+  })
+
+
+  //   .tickFormat(function(date){
+  //     if (date > 20 && date < 23){
+  //       return 'Number of Policies/Cases →';
+  //     }
+  //   else {
+  //     return d3.timeFormat('')(date);
+  //   }
+  // })
+
 
   const yAxis = bounds.append("g")
     .call(yAxisGenerator)
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    .attr("dx", "4.5em")
+    .attr("dy", "-0.5em")
+    .attr("transform", "rotate(-90)");  
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)

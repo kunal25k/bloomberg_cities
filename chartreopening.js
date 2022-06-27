@@ -109,8 +109,8 @@ async function drawLineChartReOpening() {
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus)
       .attr("width", end_focus)
-      .attr("fill", "#B8ECB8")
-      .attr('opacity','40%')
+      .attr("fill", "#39FF14")
+      .attr('opacity','90%')
 
     // 5. Draw data
   const lineGeneratorCases = d3.line()
@@ -175,7 +175,7 @@ async function drawLineChartReOpening() {
   const lineReopening = bounds.append("path")
       .attr("d", lineGeneratorReopening(dataReopen))
       .attr("fill", "none")
-      .attr("stroke", "purple")
+      .attr("stroke", "red")
       .attr("stroke-width", 2)
 
 //   const lineVax = bounds.append("path")
@@ -232,11 +232,25 @@ async function drawLineChartReOpening() {
 
   const yAxisGenerator = d3.axisLeft()
     .scale(yScale)
-    .ticks(0)
+    // .ticks(0)
     .tickSize(0)
+    .tickFormat(function(date){
+      if (date > 10 && date < 23){
+        return 'Number of Policies/Cases →';
+      }
+    else {
+      return d3.timeFormat('')(date);
+    }
+  })
+
 
   const yAxis = bounds.append("g")
     .call(yAxisGenerator)
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    // .attr("dx", "1.1em")
+    .attr("dy", "-0.5em")
+    .attr("transform", "rotate(-90)");  
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)

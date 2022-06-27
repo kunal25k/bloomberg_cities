@@ -43,8 +43,8 @@ async function drawLineChartPrev1() {
   // 2. Create chart dimensions
   // console.log(window.innerWidth)
 
-  let box = document.querySelector('h1');
-  console.log(box.offsetWidth);
+  let box = document.querySelector('p');
+  // console.log(box.offsetWidth);
 
   let dimensions = {
     width: box.offsetWidth * 0.95,
@@ -242,13 +242,48 @@ async function drawLineChartPrev1() {
 
       // 6. Draw peripherals
 
+  // const yAxisGenerator = d3.axisLeft()
+  //   .scale(yScale)
+  //   // .ticks(0)
+  //   .tickSize(0)
+  //   .tickFormat(function(date){
+  //     if (date > 30 && date < 40){
+  //       return 'Number of Policies/Cases →';
+  //     }
+  //   else {
+  //     return d3.timeFormat('')(date);
+  //   }
+  // })
+
   const yAxisGenerator = d3.axisLeft()
-    .scale(yScale)
-    .ticks(0)
-    .tickSize(0)
+  .scale(yScale)
+  // .ticks(0)
+  .tickSize(0)
+  .tickFormat(function(date){
+    if (dimensions.width > 400){
+      if (date > 30 && date < 40){
+        return 'Number of Policies →';
+      }
+    else {
+      return d3.timeFormat('')(date);
+  }}
+  else{
+    if (date > 35 && date < 45){
+      return 'Number of Policies →';
+    }
+  else {
+    return d3.timeFormat('')(date);
+  }}
+})
+
 
   const yAxis = bounds.append("g")
     .call(yAxisGenerator)
+    .selectAll("text")	
+    .style("text-anchor", "end")
+    // .attr("dx", "1.1em")
+    .attr("dy", "-1.1em")
+    .attr("transform", "rotate(-90)");
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)

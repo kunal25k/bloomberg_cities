@@ -43,7 +43,7 @@ async function drawLineChartForward() {
 
   // 2. Create chart dimensions
 
-  let box = document.querySelector('.step');
+  let box = document.querySelector('p');
   // console.log(box.offsetWidth);
   
   let dimensions = {
@@ -67,7 +67,7 @@ async function drawLineChartForward() {
 
   // 3. Draw canvas
 
-  const wrapper = d3.select("#wrapper33")
+  const wrapper = d3.select("#wrapperINITIAL")
   .append('center')
     .append("svg")
       .attr("width", dimensions.width)
@@ -86,6 +86,7 @@ async function drawLineChartForward() {
   const yScale = d3.scaleLinear()
     .domain(d3.extent(dataPrevention, yAccessor))
     .range([dimensions.boundedHeight, 0])
+    
 
   // const freezingTemperaturePlacement = yScale(10)
   // const freezingTemperatures = bounds.append("rect")
@@ -151,31 +152,31 @@ async function drawLineChartForward() {
   const linePrevention = bounds.append("path")
       .attr("d", lineGeneratorPrevention(dataPrevention))
       .attr("fill", "none")
-      .attr("stroke", "#af9358")
+      .attr("stroke", "#00FF00")
       .attr("stroke-width", 2)
 
   const lineARPA = bounds.append("path")
       .attr("d", lineGeneratorARPA(dataARPA))
       .attr("fill", "none")
-      .attr("stroke", "blue")
+      .attr("stroke", "#FFFF00")
       .attr("stroke-width", 1.5)
 
-  const lineHousing = bounds.append("path")
-      .attr("d", lineGeneratorHousing(dataHousing))
-      .attr("fill", "none")
-      .attr("stroke", "orange")
-      .attr("stroke-width", 1.5)
+  // const lineHousing = bounds.append("path")
+  //     .attr("d", lineGeneratorHousing(dataHousing))
+  //     .attr("fill", "none")
+  //     .attr("stroke", "orange")
+  //     .attr("stroke-width", 1.5)
 
   const lineReopening = bounds.append("path")
       .attr("d", lineGeneratorReopening(dataReopen))
       .attr("fill", "none")
-      .attr("stroke", "yellow")
+      .attr("stroke", "#FF00FF")
       .attr("stroke-width", 1.5)
 
   const lineVax = bounds.append("path")
       .attr("d", lineGeneratorVax(dataVax))
       .attr("fill", "none")
-      .attr("stroke", "green")
+      .attr("stroke", "#00FFFF")
       .attr("stroke-width", 1.5)
 
   // const legendGroup = wrapper.append("g")
@@ -225,19 +226,61 @@ async function drawLineChartForward() {
 
   const yAxisGenerator = d3.axisLeft()
     .scale(yScale)
+    .tickSize(0)
+    .tickFormat(function(date){
+      if (dimensions.width > 400){
+        if (date > 20 && date < 23){
+          return 'Number of Policies →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+    }}
+    else{
+      if (date > 26 && date < 40){
+        return 'Number of Policies →';
+      }
+    else {
+      return d3.timeFormat('')(date);
+    }}
+  })
+
 
   const yAxis = bounds.append("g")
-    .call(yAxisGenerator)
+  .call(yAxisGenerator)
+  .selectAll("text")	
+  .style("text-anchor", "end")
+  // .attr("dx", "-1.1em")
+  .attr("dy", "-1.1em")
+  .attr("transform", "rotate(-90)");
+
 
   const xAxisGenerator = d3.axisBottom()
     .scale(xScale)
+    .tickSize(0)
     .tickFormat(function(date){
-      if (d3.timeYear(date) < date) {
-        return d3.timeFormat('%b, %Y')(date);
-      } else {
-        return d3.timeFormat('%b, %Y')(date);
+      if (date > Date.parse("March 12, 2020") && date < Date.parse("June 12, 2020")){
+        return d3.timeFormat("")(date);
+      }
+      if (date > Date.parse("August 12, 2020") && date < Date.parse("November 12, 2020")){
+        return d3.timeFormat("")(date);
+      }
+      if (date > Date.parse("February 12, 2021") && date < Date.parse("June 12, 2021")){
+        return d3.timeFormat("")(date);
+      }
+      if (date > Date.parse("June 12, 2021") && date < Date.parse("July 12, 2021")){
+        return d3.timeFormat("")(date);
+      }
+      if (date > Date.parse("December 12, 2021") && date < Date.parse("June 12, 2022")){
+        return d3.timeFormat("")(date);
+      }
+      if (date > Date.parse("August 12, 2021") && date < Date.parse("September 12, 2022")){
+        return d3.timeFormat("2022")(date);
+      }
+      else {
+        return d3.timeFormat('%Y')(date);
       }
     })
+
   const xAxis = bounds.append("g")
   .call(xAxisGenerator)
       .style("transform",`translateY(${

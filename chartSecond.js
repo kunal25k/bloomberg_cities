@@ -120,8 +120,8 @@ async function drawLineChartSecond() {
         .attr("height", dimensions.boundedHeight)
         .attr("x", begin_focus1)
         .attr("width", end_focus1)
-        .attr("fill", "#B8ECB8")
-        .attr('opacity','40%')
+        .attr("fill", "#39FF14")
+        .attr('opacity','90%')
   
     // const begin_focus2 = xScale(Date.parse("November 8, 2020"))
     // const end_focus2 = xScale(Date.parse("January 1, 2021")) - begin_focus2
@@ -254,11 +254,25 @@ async function drawLineChartSecond() {
   
     const yAxisGenerator = d3.axisLeft()
       .scale(yScale)
-      .ticks(0)
+      // .ticks(0)
       .tickSize(0)
-  
+      .tickFormat(function(date){
+        if (date > 30 && date < 40){
+          return 'Number of Policies/Cases →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+      }
+    })
+
+
     const yAxis = bounds.append("g")
       .call(yAxisGenerator)
+      .selectAll("text")	
+      .style("text-anchor", "end")
+      // .attr("dx", "1.1em")
+      .attr("dy", "-0.5em")
+      .attr("transform", "rotate(-90)");    
   
     const xAxisGenerator = d3.axisBottom()
       .scale(xScale)

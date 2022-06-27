@@ -44,6 +44,7 @@ async function drawLineChartFirst() {
     // console.log(window.innerWidth)
   
     let box = document.querySelector('.step');
+    console.log(box.offsetWidth);
   
     let dimensions = {
         width: box.offsetWidth*0.8,
@@ -109,8 +110,8 @@ async function drawLineChartFirst() {
         .attr("height", dimensions.boundedHeight)
         .attr("x", begin_focus0)
         .attr("width", end_focus0)
-        .attr("fill", "#B8ECB8")
-        .attr('opacity','40%')
+        .attr("fill", "#39FF14")
+        .attr('opacity','90%')
   
     // const begin_focus1 = xScale(Date.parse("June 18, 2020"))
     // const end_focus1 = xScale(Date.parse("August 18, 2020")) - begin_focus1
@@ -254,11 +255,26 @@ async function drawLineChartFirst() {
   
     const yAxisGenerator = d3.axisLeft()
       .scale(yScale)
-      .ticks(0)
+      // .ticks(0)
       .tickSize(0)
+      .tickFormat(function(date){
+        if (date > 30 && date < 40){
+          return 'Number of Policies/Cases →';
+        }
+      else {
+        return d3.timeFormat('')(date);
+      }
+    })
+  
+      
   
     const yAxis = bounds.append("g")
       .call(yAxisGenerator)
+      .selectAll("text")	
+      .style("text-anchor", "end")
+      // .attr("dx", "1.1em")
+      .attr("dy", "-0.5em")
+      .attr("transform", "rotate(-90)");  
   
     const xAxisGenerator = d3.axisBottom()
       .scale(xScale)

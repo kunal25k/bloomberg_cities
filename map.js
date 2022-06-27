@@ -54,6 +54,32 @@ if (config.toptitle) {
     toptitle.innerText = config.toptitle;
     header.appendChild(toptitle);
 }
+if (config.initialGraphic) {
+    var wrapperinit = document.createElement("div");
+    wrapperinit.setAttribute('id','wrapperINITIAL');
+
+    header.appendChild(wrapperinit)
+    // drawLineChart();
+    drawLineChartForward();
+
+    var title_2 = document.createElement('p');
+    title_2.setAttribute('id','title_2');
+    // title_1.classList.add('imageCredit');
+    title_2.innerHTML = '<b>Prevention</b>, <b>Re-Opening</b>, <b>Vaccinations</b> and <b>ARPA</b>';
+    // imageCredit.style.color = 'purple';
+    var originalHtml = title_2.innerHTML;
+    var firstStr = 'Prevention'
+    var secondStr = 'Re-Opening'
+    var thirdStr = 'Vaccinations'
+    var fourthStr = 'ARPA'    
+    var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('#00FF00'));
+    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('#FF00FF'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#00FFFF'));
+    var newHtml = newHtml.replace(fourthStr, fourthStr.fontcolor('#FFFF00'));
+    title_2.innerHTML = newHtml;
+    header.appendChild(title_2);
+
+}
 if (config.title) {
     var titleText = document.createElement('h1');
     titleText.innerText = config.title;
@@ -114,8 +140,8 @@ if (config.plugin){
     var secondStr = 'Number of Cases'
     var thirdStr = 'Correlated Peaks'
     var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
-    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('blue'));
-    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#B8ECB8'));
+    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('#89CFF0'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#39FF14'));
     title_1.innerHTML = newHtml;
     header.appendChild(title_1);
 
@@ -359,9 +385,9 @@ config.chapters.forEach((record, idx) => {
         // record.graph[0]()
 
         if (record.graph[6]=='first'){
-            var wrapperFIRSTleg = document.createElement("p");
-            wrapperFIRSTleg.setAttribute('id','wrapperFIRSTleg');
-            chapter.appendChild(wrapperFIRSTleg)    
+            // var wrapperFIRSTleg = document.createElement("p");
+            // wrapperFIRSTleg.setAttribute('id','wrapperFIRSTleg');
+            // chapter.appendChild(wrapperFIRSTleg)    
 
             var wrapperFIRST = document.createElement("div");
             wrapperFIRST.setAttribute('id','wrapperFIRST');
@@ -369,9 +395,9 @@ config.chapters.forEach((record, idx) => {
         }
 
         if (record.graph[6]=='second'){
-            var wrapperSECONDleg = document.createElement("p");
-            wrapperSECONDleg.setAttribute('id','wrapperSECONDleg');
-            chapter.appendChild(wrapperSECONDleg)    
+            // var wrapperSECONDleg = document.createElement("p");
+            // wrapperSECONDleg.setAttribute('id','wrapperSECONDleg');
+            // chapter.appendChild(wrapperSECONDleg)    
 
             var wrapperSECOND = document.createElement("div");
             wrapperSECOND.setAttribute('id','wrapperSECOND');
@@ -379,9 +405,9 @@ config.chapters.forEach((record, idx) => {
         }
 
         if (record.graph[6]=='third'){
-            var wrapperTHIRDleg = document.createElement("p");
-            wrapperTHIRDleg.setAttribute('id','wrapperTHIRDleg');
-            chapter.appendChild(wrapperTHIRDleg)    
+            // var wrapperTHIRDleg = document.createElement("p");
+            // wrapperTHIRDleg.setAttribute('id','wrapperTHIRDleg');
+            // chapter.appendChild(wrapperTHIRDleg)    
 
             var wrapperTHIRD = document.createElement("div");
             wrapperTHIRD.setAttribute('id','wrapperTHIRD');
@@ -389,9 +415,9 @@ config.chapters.forEach((record, idx) => {
         }
 
         if (record.graph[6]=='reopen'){
-            var wrapperREOPENleg = document.createElement("p");
-            wrapperREOPENleg.setAttribute('id','wrapperREOPENleg');
-            chapter.appendChild(wrapperREOPENleg)    
+            // var wrapperREOPENleg = document.createElement("p");
+            // wrapperREOPENleg.setAttribute('id','wrapperREOPENleg');
+            // chapter.appendChild(wrapperREOPENleg)    
 
             var wrapperREOPEN = document.createElement("div");
             wrapperREOPEN.setAttribute('id','wrapperREOPEN');
@@ -399,9 +425,9 @@ config.chapters.forEach((record, idx) => {
         }
 
         if (record.graph[6]=='arpa'){
-            var wrapperARPAleg = document.createElement("p");
-            wrapperARPAleg.setAttribute('id','wrapperARPAleg');
-            chapter.appendChild(wrapperARPAleg)    
+            // var wrapperARPAleg = document.createElement("p");
+            // wrapperARPAleg.setAttribute('id','wrapperARPAleg');
+            // chapter.appendChild(wrapperARPAleg)    
 
             var wrapperARPA = document.createElement("div");
             wrapperARPA.setAttribute('id','wrapperARPA');
@@ -409,9 +435,9 @@ config.chapters.forEach((record, idx) => {
         }
 
         if (record.graph[6]=='vaxx'){
-            var wrapperVAXleg = document.createElement("p");
-            wrapperVAXleg.setAttribute('id','wrapperVAXleg');
-            chapter.appendChild(wrapperVAXleg)    
+            // var wrapperVAXleg = document.createElement("p");
+            // wrapperVAXleg.setAttribute('id','wrapperVAXleg');
+            // chapter.appendChild(wrapperVAXleg)    
 
             var wrapperVAX = document.createElement("div");
             wrapperVAX.setAttribute('id','wrapperVAX');
