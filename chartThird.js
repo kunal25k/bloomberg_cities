@@ -131,8 +131,8 @@ async function drawLineChartThird() {
         .attr("height", dimensions.boundedHeight)
         .attr("x", begin_focus2)
         .attr("width", end_focus2)
-        .attr("fill", "#39FF14")
-        .attr('opacity','90%')
+        .attr("fill", "#580888")
+        .attr('opacity','50%')
   
       // 5. Draw data
     const lineGeneratorCases = d3.line()
@@ -166,8 +166,8 @@ async function drawLineChartThird() {
   
       const areaCases = bounds.append("path")
           .attr("d", areaGeneratorCases(dataCases))
-          .attr("fill", "lightblue")
-          .attr("stroke", "blue")
+          .attr("fill", "#4EBFE6")
+          // .attr("stroke", "blue")
           // .attr("stroke-width", 2)
   
   //   const lineCases = bounds.append("path")
@@ -179,7 +179,7 @@ async function drawLineChartThird() {
     const linePrevention = bounds.append("path")
         .attr("d", lineGeneratorPrevention(dataPrevention))
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", "#D62828")
         .attr("stroke-width", 2)
   
   //   const lineARPA = bounds.append("path")

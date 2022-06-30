@@ -120,8 +120,8 @@ async function drawLineChartSecond() {
         .attr("height", dimensions.boundedHeight)
         .attr("x", begin_focus1)
         .attr("width", end_focus1)
-        .attr("fill", "#39FF14")
-        .attr('opacity','90%')
+        .attr("fill", "#580888")
+        .attr('opacity','50%')
   
     // const begin_focus2 = xScale(Date.parse("November 8, 2020"))
     // const end_focus2 = xScale(Date.parse("January 1, 2021")) - begin_focus2
@@ -166,8 +166,8 @@ async function drawLineChartSecond() {
   
       const areaCases = bounds.append("path")
           .attr("d", areaGeneratorCases(dataCases))
-          .attr("fill", "lightblue")
-          .attr("stroke", "blue")
+          .attr("fill", "#4EBFE6")
+          // .attr("stroke", "blue")
           // .attr("stroke-width", 2)
   
   //   const lineCases = bounds.append("path")
@@ -179,7 +179,7 @@ async function drawLineChartSecond() {
     const linePrevention = bounds.append("path")
         .attr("d", lineGeneratorPrevention(dataPrevention))
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", "#D62828")
         .attr("stroke-width", 2)
   
   //   const lineARPA = bounds.append("path")

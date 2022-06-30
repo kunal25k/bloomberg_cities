@@ -109,8 +109,8 @@ async function drawLineChartReOpening() {
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus)
       .attr("width", end_focus)
-      .attr("fill", "#39FF14")
-      .attr('opacity','90%')
+      .attr("fill", "#580888")
+      .attr('opacity','50%')
 
     // 5. Draw data
   const lineGeneratorCases = d3.line()
@@ -144,8 +144,8 @@ async function drawLineChartReOpening() {
 
     const areaCases = bounds.append("path")
         .attr("d", areaGeneratorCases(dataCases))
-        .attr("fill", "lightblue")
-        .attr("stroke", "blue")
+        .attr("fill", "#4EBFE6")
+        // .attr("stroke", "blue")
         // .attr("stroke-width", 2)
 
 //   const lineCases = bounds.append("path")
@@ -175,7 +175,7 @@ async function drawLineChartReOpening() {
   const lineReopening = bounds.append("path")
       .attr("d", lineGeneratorReopening(dataReopen))
       .attr("fill", "none")
-      .attr("stroke", "red")
+      .attr("stroke", "#D62828")
       .attr("stroke-width", 2)
 
 //   const lineVax = bounds.append("path")

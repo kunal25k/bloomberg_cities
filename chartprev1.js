@@ -156,8 +156,8 @@ async function drawLineChartPrev1() {
 
     const areaCases = bounds.append("path")
         .attr("d", areaGeneratorCases(dataCases))
-        .attr("fill", "lightblue")
-        .attr("stroke", "blue")
+        .attr("fill", "#4EBFE6")
+        // .attr("stroke", "blue")
         // .attr("stroke-width", 2)
 
 //   const lineCases = bounds.append("path")
@@ -169,7 +169,7 @@ async function drawLineChartPrev1() {
   const linePrevention = bounds.append("path")
       .attr("d", lineGeneratorPrevention(dataPrevention))
       .attr("fill", "none")
-      .attr("stroke", "red")
+      .attr("stroke", "#D62828")
       .attr("stroke-width", 2)
 
 //   const lineARPA = bounds.append("path")
@@ -330,15 +330,16 @@ async function drawLineChartPrev1() {
       // .attr("dy", "0.8em")
       // .attr("transform", "rotate(-20)");
 
-      const begin_focus0 = xScale(Date.parse("January 15, 2021"))
-      const end_focus0 = xScale(Date.parse("January 17, 2021")) - begin_focus0
+      const begin_focus0 = xScale(Date.parse("January 5, 2021"))
+      const end_focus0 = xScale(Date.parse("January 15, 2021")) - begin_focus0
     
       const boilingTemperatures0 = bounds.append("rect")
           .attr("y", 0)
           .attr("height", dimensions.boundedHeight)
           .attr("x", begin_focus0)
           .attr("width", end_focus0)
-          .attr("fill", "green")
+          .attr("fill", "#580888")
+          .attr('opacity','70%')
           // .attr('opacity','40%')
     
 

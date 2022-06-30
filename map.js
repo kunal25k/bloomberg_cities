@@ -141,7 +141,7 @@ if (config.plugin){
     var thirdStr = 'Correlated Peaks'
     var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
     var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('#89CFF0'));
-    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#39FF14'));
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#9E00FF'));
     title_1.innerHTML = newHtml;
     header.appendChild(title_1);
 
@@ -179,8 +179,8 @@ if (config.plugin){
     var secondStr = 'Number of Cases'
     var thirdStr = 'Inflection Point'
     var newHtml = originalHtml.replace(firstStr, firstStr.fontcolor('red'));
-    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('blue'));
-    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('green'));
+    var newHtml = newHtml.replace(secondStr, secondStr.fontcolor('#89CFF0')); 
+    var newHtml = newHtml.replace(thirdStr, thirdStr.fontcolor('#9E00FF'));
     title_1.innerHTML = newHtml;
     header.appendChild(title_1);
 

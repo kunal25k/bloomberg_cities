@@ -173,7 +173,7 @@ var config = {
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
             description: '<span>On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.<span>', //That’s 35% of all local covid actions to date!
             butt: sl1,
-            graph : [drawFirstLegend,drawLineChartFirst, 'blue', 'red', 'Cases' ,'Prevention Policies','first'],
+            graph : [drawFirstLegend,drawLineChartFirst, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','first'],
             callback: 'addLegend',
             location: {
                 center: [-95.7129, 37.0902],
@@ -245,9 +245,9 @@ var config = {
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
             description: '<b>Reopening</b> policies spiked in June 2020, when the first wave had sort of plateaued before rising up again. This indicates that the laxing of policies/ loosening up lockdown policies were strongly correlated with the rise in cases.',
             callback: 'addLegend',
-            imageCredit: 'Re-Opening Policies and <b>Cases</b>',
+            imageCredit: '<b>Re-Opening Policies</b> and <b>Cases</b>',
             butt: sl3,
-            graph : [drawReOpeningLegend,drawLineChartReOpening, 'blue', 'red', 'Cases' ,'Re-Opening Policies','reopen'],
+            graph : [drawReOpeningLegend,drawLineChartReOpening, '#89CFF0', '#D62828', 'Cases' ,'Re-Opening Policies','reopen'],
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -318,7 +318,7 @@ var config = {
             // butt: sl3,
             title: '(3/6) The Second Wave, August 2020',
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            graph : [drawSecondLegend,drawLineChartSecond, 'blue', 'red', 'Cases' ,'Prevention Policies','second'],
+            graph : [drawSecondLegend,drawLineChartSecond, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','second'],
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
             description: 'The loosening of Covid restrictions saw a second wave of the coronavirus corresponding with a <b>second wave of Prevention Policies</b> - with cities reimposing many restrictions',
@@ -453,7 +453,7 @@ var config = {
             title: '(4/6) The Third Wave, December 2020',
             butt: sl7,
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            graph : [drawThirdLegend,drawLineChartThird, 'blue', 'red', 'Cases' ,'Prevention Policies','third'],
+            graph : [drawThirdLegend,drawLineChartThird, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','third'],
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
             description: 'As a devastating third wave swept through the country, while there were lesser city policies, cities imposed tighter restrictions - have a look below.',
@@ -547,7 +547,7 @@ var config = {
             butt: sl8,
             imageCredit: '<b>Vaccination Policies</b> and <b>Cases</b>',
             // callback: addLegend,
-            graph : [drawVaxLegend,drawLineChartVax, 'blue', 'green', 'Cases' ,'Vaccination Policies','vaxx'],
+            graph : [drawVaxLegend,drawLineChartVax, '#89CFF0', '#D62828', 'Cases' ,'Vaccination Policies','vaxx'],
             description: 'The approval of COVID vaccines in December, 2020 coincided with a decrease in overall cases throughout the country.',
             location: {
                 center: [-95.7129, 37.0902],
@@ -707,7 +707,7 @@ var config = {
             sec: [slAL, slAS],
             // callback: removeLegend,
             imageCredit: '<b>ARPA Policies</b> and <b>Cases</b>',
-            graph : [drawARPALegend,drawLineChartARPA, 'blue', 'green', 'Cases' ,'ARPA Policies','arpa'],
+            graph : [drawARPALegend,drawLineChartARPA, '#89CFF0', '#D62828', 'Cases' ,'ARPA Policies','arpa'],
             description:'The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies.<br><br> While larger cities seemed to focus investments on housing, smaller cities used their ARPA budgets to update their infrastructure.',
             location: {
                 center: [-95.7129, 37.0902],

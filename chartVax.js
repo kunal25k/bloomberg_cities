@@ -134,8 +134,8 @@ async function drawLineChartVax() {
 
     const areaCases = bounds.append("path")
         .attr("d", areaGeneratorCases(dataCases))
-        .attr("fill", "lightblue")
-        .attr("stroke", "blue")
+        .attr("fill", "#4EBFE6")
+        // .attr("stroke", "blue")
         // .attr("stroke-width", 2)
 
 //   const lineCases = bounds.append("path")
@@ -171,7 +171,7 @@ async function drawLineChartVax() {
   const lineVax = bounds.append("path")
       .attr("d", lineGeneratorVax(dataVax))
       .attr("fill", "none")
-      .attr("stroke", "green")
+      .attr("stroke", "#D62828")
       .attr("stroke-width", 2)
 
 //   const legendGroup = wrapper.append("g")
@@ -221,14 +221,15 @@ async function drawLineChartVax() {
 //   legendGroup.append("text").attr("x", 40).attr("y", 65).text("Cases").style("font-size", "10px").attr("alignment-baseline","middle")  
 
   const begin_focus = xScale(Date.parse("December 10, 2020"))
-  const end_focus = xScale(Date.parse("December 11, 2020")) - begin_focus
+  const end_focus = xScale(Date.parse("December 18, 2020")) - begin_focus
 
   const boilingTemperatures = bounds.append("rect")
       .attr("y", 0)
       .attr("height", dimensions.boundedHeight)
       .attr("x", begin_focus)
       .attr("width", end_focus)
-      .attr("fill", "red")
+      .attr("fill", "#580888")
+      .attr('opacity','50%')
 
       // 6. Draw peripherals
 

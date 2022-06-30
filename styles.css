@@ -244,6 +244,8 @@ body {
   .dark {
 	color: #fafafa;
 	background-color: #1e1e1e;
+	/* background-color: #121212; */
+	/* background-color: #160F23; */
   }
   .step {
 	padding-top: 20vh;
