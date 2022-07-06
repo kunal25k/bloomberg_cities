@@ -114,7 +114,7 @@ if (header.innerText.length > 0) {
 if (config.plugin){
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = '<i>Local actions were reactive to the pandemic</i> <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>     ';
+    descriptionText.innerHTML = 'We analysed over 5000 local actions, and we observed that <i> Local actions </i> were <i>reactive to the pandemic</i>. Here are three main takeaways- <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>';
     header.appendChild(descriptionText);
 
     // var wrapperINITIALleg = document.createElement("p");
