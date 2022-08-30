@@ -114,7 +114,8 @@ if (header.innerText.length > 0) {
 if (config.plugin){
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = 'We analysed over 5000 local actions, and we observed that <i> Local actions </i> were <i>reactive to the pandemic</i>. Here are three main takeaways- <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>';
+    // descriptionText.innerHTML = 'We analysed over 5000 local actions, and we observed that <i> Local actions </i> were <i>reactive to the pandemic</i>. Here are three main takeaways- <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>';
+    descriptionText.innerHTML = "The database contains over 5,000 local actions, where the different types of policies taken by local governments across the country have been documented and classified.<br><br>Each policy was manually classified based on the Policy Area, the type of action and the population impacted. There were more than 20 different Policy Areas, including Preventions, Re-Opening, Vaccinations and ARPA. <br><br> Data analysis shows clear trends in how cities reacted to different waves and milestones of the COVID-19 pandemic, and how they shifted strategies in response to the changing contours of the virus. <b> <br><br> 1. There is a correlation between peaks in case counts and prevention policies </b>";
     header.appendChild(descriptionText);
 
     // var wrapperINITIALleg = document.createElement("p");
@@ -146,7 +147,8 @@ if (config.plugin){
     header.appendChild(title_1);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = 'One can identify <b>3</b> peaks in covid cases, and <b>3</b> peaks in prevention policies in the graph above.The first peak of the pandemic, seen in April 2020, corresponds to the largest peak of prevention policies - with as many as <b>65</b> different cities coming out with prevention policies on a single day. <br></br> The first peak saw local actions being taken much earlier than the increase in cases: As America had already seen the spread of the pandemic in countries like China and Italy, cities preemptively planned for the onslaught of COVID.';
+    // descriptionText.innerHTML = 'One can identify <b>3</b> peaks in covid cases, and <b>3</b> peaks in prevention policies in the graph above.The first peak of the pandemic, seen in April 2020, corresponds to the largest peak of prevention policies - with as many as <b>65</b> different cities coming out with prevention policies on a single day. <br></br> The first peak saw local actions being taken much earlier than the increase in cases: As America had already seen the spread of the pandemic in countries like China and Italy, cities preemptively planned for the onslaught of COVID.';
+    descriptionText.innerHTML = "The first peak of the pandemic, seen in April 2020, corresponds to the largest peak of prevention policies– policies such as New York City declaring a state of emergency, and Miami announcing a curfew, designed to slow the spread of the disease– with <b> as many as 65 different cities rolling out prevention policies on a single day</b>. During this time, local action preempted the rise in cases: as local leaders had witnessed the devastation of the pandemic in countries like China and Italy, cities preemptively planned for its onslaught. ";
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
@@ -154,11 +156,12 @@ if (config.plugin){
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = "This can be explained by the following -<br>•  With every wave, people's understanding about the disease process increased.<br>•  So people and cities were better equipped due to the policies already in place.<br>•  People's mindsets got adjusted to the ‘new normal’, and they started following the policies already in place.<br>•  Public awareness and cooperation increased<br>•  The cases peaked according to the nature of the strain of virus at the time, but no new policies needed to be in place.";
+    // descriptionText.innerHTML = "This can be explained by the following -<br>•  With every wave, people's understanding about the disease process increased.<br>•  So people and cities were better equipped due to the policies already in place.<br>•  People's mindsets got adjusted to the ‘new normal’, and they started following the policies already in place.<br>•  Public awareness and cooperation increased<br>•  The cases peaked according to the nature of the strain of virus at the time, but no new policies needed to be in place.";
+    descriptionText.innerHTML = "With every wave, people's understanding about the disease process increased, and they adjusted to the prevention policies established upfront to navigate the evolving epidemic. <br><br> City leaders had set up the policy tools pretty early on, and tightened and loosened those in response to the changing pandemic";
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = '<b>3. An Inflection point</b>';
+    descriptionText.innerHTML = '<b>3. The link between prevention policies and COVID cases breaks</b>';
     header.appendChild(descriptionText);
     
 
@@ -186,7 +189,8 @@ if (config.plugin){
 
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = "In January 2021, we see an inflection point - where the correlation between prevention policies and covid cases ceases to exist. <br> <br>We do see that covid cases themselves didn't peak until September 2021, and had no corresponding peak of prevention policies. Another reason for this drying up of prevention policies was the introduction of COVID vaccines in January 2021.";
+    // descriptionText.innerHTML = "In January 2021, we see an inflection point - where the correlation between prevention policies and covid cases ceases to exist. <br> <br>We do see that covid cases themselves didn't peak until September 2021, and had no corresponding peak of prevention policies. Another reason for this drying up of prevention policies was the introduction of COVID vaccines in January 2021.";
+    descriptionText.innerHTML = "In January 2021, we see an inflection point where the correlation between prevention policies and COVID-19 cases falls away. <br><br> At this point, COVID-19 vaccines are being introduced and policy action subsides. <br><br>Even as the US contended with one of the steepest peaks in September 2021 (Omicron), prevention policies have largely been phased out as cities looked towards economic recovery and living with the virus. "
     header.appendChild(descriptionText);
 
 }

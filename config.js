@@ -162,7 +162,8 @@ var config = {
     // byline: 'Story by Kunal Kulkarni and Manisha Mirchandani Graphics by Kunal Kulkarni',
     clout: '<br>Story by <a href="https://www.linkedin.com/in/kunal25k/"> Kunal Kulkarni</a> and <a href="https://www.linkedin.com/in/manisha-mirchandani-5a658611">Manisha Mirchandani</a> <br> Graphics by <a href="https://www.linkedin.com/in/kunal25k/">Kunal Kulkarni</a>',
     // description: '<p>This tutorial demonstrates how to use <a href="https://github.com/mapbox/storytelling">Mapbox Storytelling</a> with our previous web mapping example. Here we will use Mapbox storytelling template to first, give an overview of the decrease in subway usage around the city, and second, zoom into three different locations that exemplify the diversity of conditions around New York.</p><p>We will use the <a href="https://pointsunknown.nyc/web%20mapping/mapbox/2020/03/25/10_WebmappingTurnstileData.html">previous web map displaying MTA turnstile data</a> as the basis for our story. In this process we will use Mapbox GL JS, as well as Intersection Observer and Scrollama as our main JavaScript libraries.</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum natus eos cum rem iure aperiam omnis distinctio illo quis, sunt nesciunt sint impedit deleniti dolor saepe necessitatibus eligendi aut?</p>',
-    description: "Bloomberg Philanthropies, along with the NLC created the COVID-19 local action tracker. The data in this Tracker reflects how communities across the country jumped into action to address community needs and learn from one another. ",
+    // description: "Bloomberg Philanthropies, along with the NLC created the COVID-19 local action tracker. The data in this Tracker reflects how communities across the country jumped into action to address community needs and learn from one another. ",
+    description: "The COVID-19 Local Action Tracker was created by the National League of Cities to paint a picture of the scale and nature of policy action being taken by localities in response to the global pandemic. The data collected reflects how communities across the country sprung to action to address community needs and learn from one another.",
     footer: 'This story is based on data by <a href="https://www.nlc.org/resource/covid-19-local-action-tracker/">Bloomberg Philantropies and the National League of Cities</a> ',
     footerAttribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> | <a href="https://brown.columbia.edu">The Brown Institute for Media Innovation</a>',
     chapters: [
@@ -171,7 +172,7 @@ var config = {
             title: '(1/6) The First Wave, April 2020', // 2020-03-20
             // image: 'images/chevron.png',
             imageCredit: '<b>Prevention Policies</b> and <b>Cases</b>',
-            description: '<span>On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. The next month saw more than <b>1600</b> policies proposed.<span>', //That’s 35% of all local covid actions to date!
+            description: '<span>On March 13, 2020, the novel coronavirus outbreak was declared a national emergency.<br> Anticipating a wave of infections after COVID had ravaged through China and Italy, in the following week, more than <b>350</b> cities came out with emergency policies. April 2020 saw more than <b>1600</b> policies proposed.<span>', //That’s 35% of all local covid actions to date!
             butt: sl1,
             graph : [drawFirstLegend,drawLineChartFirst, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','first'],
             callback: 'addLegend',
@@ -243,7 +244,8 @@ var config = {
             title: '(2/6) Re-Opening, May 2020', // 2020-04-10
             // image: 'images/Chapter_1_Image.jpg',
             // imageCredit: '<a href="http://www.metouhey.com/">Max Touhey</a>',
-            description: '<b>Reopening</b> policies spiked in June 2020, when the first wave had sort of plateaued before rising up again. This indicates that the laxing of policies/ loosening up lockdown policies were strongly correlated with the rise in cases.',
+            // description: '<b>Reopening</b> policies spiked in June 2020, when the first wave had sort of plateaued before rising up again. This indicates that the laxing of policies/ loosening up lockdown policies were strongly correlated with the rise in cases.',
+            description: "Reopening policies– such as open door restaurant initiatives, removal of mask mandates, withdrawal of curfew restrictions and —  rose in June 2020, followed by another spike in cases showing the relationship between restrictions and the spread of the disease.",
             callback: 'addLegend',
             imageCredit: '<b>Re-Opening Policies</b> and <b>Cases</b>',
             butt: sl3,
@@ -321,7 +323,8 @@ var config = {
             graph : [drawSecondLegend,drawLineChartSecond, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','second'],
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'The loosening of Covid restrictions saw a second wave of the coronavirus corresponding with a <b>second wave of Prevention Policies</b> - with cities reimposing many restrictions',
+            // description: 'The loosening of Covid restrictions saw a second wave of the coronavirus corresponding with a <b>second wave of Prevention Policies</b> - with cities reimposing many restrictions',
+            description: "The loosening of COVID-19 restrictions– and the following wave of cases — precipitated a rise in prevention policies - with cities reimposing a number of restrictions.",
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -456,7 +459,8 @@ var config = {
             graph : [drawThirdLegend,drawLineChartThird, '#89CFF0', '#D62828', 'Cases' ,'Prevention Policies','third'],
             // image: 'images/Chapter_2_Image.jpg',
             // imageCredit: '<a href="https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html">The New York Times</a>',
-            description: 'As a devastating third wave swept through the country, while there were lesser city policies, cities imposed tighter restrictions - have a look below.',
+            // description: 'As a devastating third wave swept through the country, while there were lesser city policies, cities imposed tighter restrictions - have a look below.',
+            description: "As a devastating third wave swept through the country, while there were fewer city policies being pushed out, cities imposed tighter restrictions.",
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
@@ -708,7 +712,7 @@ var config = {
             // callback: removeLegend,
             imageCredit: '<b>ARPA Policies</b> and <b>Cases</b>',
             graph : [drawARPALegend,drawLineChartARPA, '#89CFF0', '#D62828', 'Cases' ,'ARPA Policies','arpa'],
-            description:'The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies.<br><br> While larger cities seemed to focus investments on housing, smaller cities used their ARPA budgets to update their infrastructure.',
+            description:'The American Rescue Plan Act was introduced to speed up the countries recovery from the economic and health effects of the COVID-19 pandemic and the ongoing recession. More than <b>350</b> cities have since introduced ARPA policies.<br><br> While larger cities seemed to focus investments on housing, smaller cities tended to use their ARPA budgets to update their infrastructure.',
             location: {
                 center: [-95.7129, 37.0902],
                 zoom: infoZoom,
