@@ -284,10 +284,10 @@ async function drawLineChartFirst() {
           return d3.timeFormat("")(date);
         }
         else if (date > Date.parse("April 12, 2020") && date < Date.parse("July 12, 2020")){
-          return d3.timeFormat('')(date);
+          return d3.timeFormat("")(date);
         }
         else if (date > Date.parse("August 12, 2020") && date < Date.parse("November 12, 2020")){
-          return d3.timeFormat('')(date);
+          return d3.timeFormat("")(date);
         }
         else if (date > Date.parse("March 12, 2020") && date < Date.parse("April 12, 2020")){
             return d3.timeFormat("Apr '20")(date);

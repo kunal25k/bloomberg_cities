@@ -304,7 +304,7 @@ async function drawLineChartPrev() {
         return d3.timeFormat("Aug '20")(date);
       }
       else if (date > Date.parse("April 12, 2020") && date < Date.parse("June 12, 2020")){
-        return d3.timeFormat('')(date);
+        return d3.timeFormat("")(date);
       }
       else if (date > Date.parse("June 12, 2020") && date < Date.parse("July 12, 2020")){
         return d3.timeFormat("")(date);

@@ -115,7 +115,7 @@ if (config.plugin){
 
     var descriptionText = document.createElement('p');
     // descriptionText.innerHTML = 'We analysed over 5000 local actions, and we observed that <i> Local actions </i> were <i>reactive to the pandemic</i>. Here are three main takeaways- <br><br> <b>1. There is a correlation between peaks in case counts and prevention policies </b>';
-    descriptionText.innerHTML = "The database contains over 5,000 local actions, where the different types of policies taken by local governments across the country have been documented and classified.<br><br>Each policy was manually classified based on the Policy Area, the type of action and the population impacted. There were more than 20 different Policy Areas, including Preventions, Re-Opening, Vaccinations and ARPA. <br><br> Data analysis shows clear trends in how cities reacted to different waves and milestones of the COVID-19 pandemic, and how they shifted strategies in response to the changing contours of the virus. <b> <br><br> 1. There is a correlation between peaks in case counts and prevention policies </b>";
+    descriptionText.innerHTML = "The database contains over 5,000 local actions, where the different types of policies taken by local governments across the country have been documented and classified.<br><br>Each policy was manually classified based on the policy area, the type of action and the population impacted. There were more than 20 different policy areas, including preventions, re-opening, vaccinations and the American Rescue Plan Act (ARPA). <br><br> Data analysis shows clear trends in how cities reacted to different waves and milestones of the COVID-19 pandemic, and how they shifted strategies in response to the changing contours of the virus. <b> <br><br> 1. There is a correlation between peaks in case counts and prevention policies </b>";
     header.appendChild(descriptionText);
 
     // var wrapperINITIALleg = document.createElement("p");
@@ -134,7 +134,7 @@ if (config.plugin){
     var title_1 = document.createElement('p');
     title_1.setAttribute('id','title_1');
     // title_1.classList.add('imageCredit');
-    title_1.innerHTML = 'Figure: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and their <b>Correlated Peaks</b>';
+    title_1.innerHTML = 'Figure 1: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and their <b>Correlated Peaks</b>';
     // imageCredit.style.color = 'purple';
     var originalHtml = title_1.innerHTML;
     var firstStr = 'Number of Prevention Policies'
@@ -152,7 +152,7 @@ if (config.plugin){
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = '<b>2. While covid cases were on the rise, prevention policy peaks reduced to a straight line.</b>';
+    descriptionText.innerHTML = '<b>2. While COVID-19 cases were on the rise, prevention policy peaks reduced to a straight line.</b>';
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
@@ -161,7 +161,7 @@ if (config.plugin){
     header.appendChild(descriptionText);
 
     var descriptionText = document.createElement('p');
-    descriptionText.innerHTML = '<b>3. The link between prevention policies and COVID cases breaks</b>';
+    descriptionText.innerHTML = '<b>3. The link between prevention policies and COVID-19 cases breaks</b>';
     header.appendChild(descriptionText);
     
 
@@ -175,7 +175,7 @@ if (config.plugin){
     var title_1 = document.createElement('p');
     title_1.setAttribute('id','title_1');
     // title_1.classList.add('imageCredit');
-    title_1.innerHTML = 'Figure: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and the <b>Inflection Point</b>';
+    title_1.innerHTML = 'Figure 2: ' + 'Comparing the<b> Number of Prevention Policies</b>, <b>Number of Cases</b> and the <b>Inflection Point</b>';
     // imageCredit.style.color = 'purple';
     var originalHtml = title_1.innerHTML;
     var firstStr = 'Number of Prevention Policies'
@@ -190,7 +190,7 @@ if (config.plugin){
 
     var descriptionText = document.createElement('p');
     // descriptionText.innerHTML = "In January 2021, we see an inflection point - where the correlation between prevention policies and covid cases ceases to exist. <br> <br>We do see that covid cases themselves didn't peak until September 2021, and had no corresponding peak of prevention policies. Another reason for this drying up of prevention policies was the introduction of COVID vaccines in January 2021.";
-    descriptionText.innerHTML = "In January 2021, we see an inflection point where the correlation between prevention policies and COVID-19 cases falls away. <br><br> At this point, COVID-19 vaccines are being introduced and policy action subsides. <br><br>Even as the US contended with one of the steepest peaks in September 2021 (Omicron), prevention policies have largely been phased out as cities looked towards economic recovery and living with the virus. "
+    descriptionText.innerHTML = "In January 2021, we see an inflection point where the correlation between prevention policies and COVID-19 cases falls away. <br><br> At this point, COVID-19 vaccines are being introduced and policy action subsides. <br><br>Even as the US contended with one of the steepest peaks in September 2021 (Omicron), prevention policies have largely been phased out as cities looked towards economic recovery and living with the virus.<br><br><b> How did city actions evolve with the pandemic?</b> <br><br>Scroll below to see how city actions changed with the number of COVID-19 cases. Blue, yellow and red signify 500, 1000 and 3000 daily cases."
     header.appendChild(descriptionText);
 
 }
@@ -455,7 +455,7 @@ config.chapters.forEach((record, idx) => {
         var imageCredit = document.createElement('p');
         imageCredit.setAttribute('id','imageCredit');
         imageCredit.classList.add('imageCredit');
-        imageCredit.innerHTML = 'Figure: ' + record.imageCredit;
+        imageCredit.innerHTML = 'Figure ' + record.imageCredit;
         // imageCredit.style.color = 'purple';
         var originalHtml = imageCredit.innerHTML;
         var firstStr = record.graph[4]
