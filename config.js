@@ -249,7 +249,7 @@ var config = {
             description: "Reopening policies– such as open door restaurant initiatives, removal of mask mandates, withdrawal of curfew restrictions and —  rose in June 2020, followed by another spike in cases showing the relationship between restrictions and the spread of the disease.",
             callback: 'addLegend',
             imageCredit: '4. <b>Re-Opening Policies</b> and <b>Cases</b>',
-            butt: sl3,
+            // butt: sl3,
             graph : [drawReOpeningLegend,drawLineChartReOpening, '#89CFF0', '#D62828', 'Cases' ,'Re-Opening Policies','reopen'],
             location: {
                 center: [-95.7129, 37.0902],
